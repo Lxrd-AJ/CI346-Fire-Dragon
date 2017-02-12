@@ -4,7 +4,7 @@ import XCTest
 class ServerTest: XCTestCase {
     func testExampleTest(){
         let server = Server()
-        XCTAssertEqual( server.port, 8080, "Correct port number used" )
+        XCTAssertEqual( server.port, 8090, "Correct port number used" )
     }
 }
 

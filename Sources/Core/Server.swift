@@ -4,7 +4,7 @@ import HeliumLogger
 public class Server{
 
     public let router:Router
-    public let port:Int = 8080
+    public let port:Int = 8090
     let staticServer = StaticFileServer(path: "./Clients/Web/Dist/")
 
     public init() { //staticDir:String:"./Clients/Web/Dist/"

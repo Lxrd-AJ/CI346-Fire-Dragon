@@ -1,5 +1,5 @@
 import XCTest
-@testable import ApplicationTests
+@testable import CoreTests
 @testable import DatabaseTests
 
 XCTMain([

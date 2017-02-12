@@ -8,9 +8,9 @@ To build for release
 `swift build --configuration release`
 
 # ToDo
-[x] Setup Project
-[x] Implement tests
-[ ] Setup deployment scripts
-[ ] Setup Jenkins deployment
-[ ] Deploy to anonymousrabbi.ibraheemaj.xyz
-[ ] Setup SSL to server
+- [x] Setup Project
+- [x] Implement tests
+- [x] Setup deployment scripts
+- [ ] Setup Jenkins deployment
+- [ ] Deploy to anonymousrabbi.ibraheemaj.xyz
+- [ ] Setup SSL to server
