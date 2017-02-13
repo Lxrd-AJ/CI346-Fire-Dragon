@@ -7,7 +7,7 @@ pipeline {
 
         stage("Test"){
             steps{
-                sh "chmod +x test_server.sh"
+                //sh "chmod +x test_server.sh"
                 //sh "sudo ./test_server.sh"
                 sh "${swift} test"
             }
