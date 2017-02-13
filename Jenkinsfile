@@ -1,7 +1,9 @@
 pipeline {
     agent any
 
-    def swift = "/home/mr_robot/.swiftenv/shims/swift"
+    environment {
+        swift = "/home/mr_robot/.swiftenv/shims/swift"
+    }
 
     stages {
 
@@ -16,7 +18,7 @@ pipeline {
         stage("Build"){
             steps {
                 sh "${swift} build --configuration release"
-                archiveArtifacts artifacts: "./.build/release/Application"
+                archive "./.build/release/Application"
             }
         }
 
