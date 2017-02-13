@@ -5,7 +5,8 @@ pipeline {
 
         stage("Test"){
             steps{
-                sh "/home/mr_robot/.swiftenv/shims/swift test"
+                //sh "/home/mr_robot/.swiftenv/shims/swift test"
+                sh "./test_server.sh"
             }
         }
 
