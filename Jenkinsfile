@@ -17,9 +17,10 @@ pipeline {
             steps{
                 //sh "chmod +x test_server.sh"
                 //sh "sudo ./test_server.sh"
-                withEnv(['PATH+SWIFT=/home/mr_robot/.swiftenv/shims']){
-                    sh "swift test"
-                }
+                //withEnv(['PATH+SWIFT=/home/mr_robot/.swiftenv/shims']){
+                //    sh "swift test"
+                //}
+                sh "bash ./test_server.sh"
             }
         }
 
