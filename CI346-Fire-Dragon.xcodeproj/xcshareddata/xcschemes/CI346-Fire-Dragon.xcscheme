@@ -14,7 +14,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_143"
+=======
+               BlueprintIdentifier = "OBJ_144"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "LoggerAPI.framework"
                BlueprintName = "LoggerAPI"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -28,7 +32,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_150"
+=======
+               BlueprintIdentifier = "OBJ_151"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "Socket.framework"
                BlueprintName = "Socket"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -42,7 +50,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_159"
+=======
+               BlueprintIdentifier = "OBJ_160"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "SSLService.framework"
                BlueprintName = "SSLService"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -56,7 +68,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_168"
+=======
+               BlueprintIdentifier = "OBJ_169"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "CHTTPParser.framework"
                BlueprintName = "CHTTPParser"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -70,7 +86,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_183"
+=======
+               BlueprintIdentifier = "OBJ_184"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "KituraNet.framework"
                BlueprintName = "KituraNet"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -84,7 +104,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_232"
+=======
+               BlueprintIdentifier = "OBJ_233"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "SwiftyJSON.framework"
                BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -98,7 +122,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_240"
+=======
+               BlueprintIdentifier = "OBJ_241"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "KituraTemplateEngine.framework"
                BlueprintName = "KituraTemplateEngine"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -112,7 +140,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_247"
+=======
+               BlueprintIdentifier = "OBJ_248"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "Kitura.framework"
                BlueprintName = "Kitura"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -126,7 +158,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_309"
+=======
+               BlueprintIdentifier = "OBJ_310"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "HeliumLogger.framework"
                BlueprintName = "HeliumLogger"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -140,7 +176,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_318"
+=======
+               BlueprintIdentifier = "OBJ_319"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "Application"
                BlueprintName = "Application"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -154,7 +194,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_346"
+=======
+               BlueprintIdentifier = "OBJ_347"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "Core.framework"
                BlueprintName = "Core"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -168,7 +212,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_348"
+=======
+               BlueprintIdentifier = "OBJ_349"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "Database.framework"
                BlueprintName = "Database"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -186,7 +234,11 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_397"
+=======
+               BlueprintIdentifier = "OBJ_398"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "CoreTests.xctest"
                BlueprintName = "CoreTests"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -196,7 +248,11 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "OBJ_424"
+=======
+               BlueprintIdentifier = "OBJ_425"
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
                BuildableName = "DatabaseTests.xctest"
                BlueprintName = "DatabaseTests"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -216,6 +272,7 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+<<<<<<< HEAD
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
@@ -226,6 +283,17 @@
             ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+=======
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "OBJ_144"
+            BuildableName = "LoggerAPI.framework"
+            BlueprintName = "LoggerAPI"
+            ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+>>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

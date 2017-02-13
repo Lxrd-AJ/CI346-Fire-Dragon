@@ -14,3 +14,7 @@ To build for release
 - [ ] Setup Jenkins deployment
 - [ ] Deploy to anonymousrabbi.ibraheemaj.xyz
 - [ ] Setup SSL to server
+- [x] AngularJS FrontEnd basic setup
+- [ ] Keycloak Auth basic setup
+- [ ] Database basic setup and MongoKitten/Redbird setup
+

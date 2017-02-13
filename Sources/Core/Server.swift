@@ -5,7 +5,7 @@ public class Server{
 
     public let router:Router
     public let port:Int = 8090
-    let staticServer = StaticFileServer(path: "./Clients/Web/Dist/")
+    let staticServer = StaticFileServer(path: "./Clients/Web/Dist/") //TODO: Change Static Dir based on the env
 
     public init() { //staticDir:String:"./Clients/Web/Dist/"
         router = Router()
