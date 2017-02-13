@@ -7,7 +7,7 @@ pipeline {
             steps{
                 //sh "/home/mr_robot/.swiftenv/shims/swift test"
                 sh "chmod +x test_server.sh"
-                sh "./test_server.sh"
+                sh "sudo ./test_server.sh"
             }
         }
 
