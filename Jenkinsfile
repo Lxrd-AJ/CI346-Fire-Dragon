@@ -27,13 +27,5 @@ pipeline {
                 sh "./.build/release/Application env=prod"
             }
         }
-
-        stage("Deploy"){
-            when { currentBuild.result == 'SUCCESS' }
-            steps{
-                //Do nothing for now
-                sh "echo 'Complete'"
-            }
-        }
     }
 }
