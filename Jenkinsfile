@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage("Test-Start_Server"){
+        stage("Run"){
             steps{
                 sh "./.build/release/Application env=prod"
             }
