@@ -10,6 +10,8 @@ pipeline {
             steps{
                 sh "node -v"
                 sh "whoami"
+                env.USER = "mr_robot"
+                sh "whoami"
                 sh "which swift"
             }
         }
@@ -18,6 +20,7 @@ pipeline {
             steps{
                 //sh "chmod +x test_server.sh"
                 //sh "sudo ./test_server.sh"
+                env.USER = "mr_robot"
                 sh "swift test"
             }
         }
