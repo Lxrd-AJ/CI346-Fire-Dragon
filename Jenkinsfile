@@ -17,13 +17,13 @@ pipeline {
             steps{
                 //sh "chmod +x test_server.sh"
                 //sh "sudo ./test_server.sh"
-                sh "${swift} test"
+                sh "swift test"
             }
         }
 
         stage("Build"){
             steps {
-                sh "${swift} build --configuration release"
+                sh "swift build --configuration release"
                 archive "./.build/release/Application"
             }
         }
