@@ -10,6 +10,7 @@ pipeline {
             steps{
                 sh "node -v"
                 sh "whoami"
+                sh "which swift"
             }
         }
 
