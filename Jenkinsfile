@@ -3,15 +3,15 @@ pipeline {
 
     stages {
 
-        stage("Test - Server"){
+        stage("Test"){
             steps{
-                sh "swift test"
+                sh "/home/mr_robot/.swiftenv/shims/swift test"
             }
         }
 
-        stage("Build - Server"){
+        stage("Build"){
             steps {
-                sh "swift build --configuration release"
+                sh "/home/mr_robot/.swiftenv/shims/swift build --configuration release"
             }
         }
 
