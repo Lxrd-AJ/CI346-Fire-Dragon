@@ -6,6 +6,12 @@ pipeline {
     }
 
     stages {
+        stage("Pre-Test"){
+            steps{
+                sh "node -v"
+                sh "whoami"
+            }
+        }
 
         stage("Test"){
             steps{
@@ -27,5 +33,11 @@ pipeline {
                 sh "./.build/release/Application env=prod"
             }
         }
+
+        post {
+            failure {
+                //mail to:"ibraheemaj@icloud.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
+            }
+          }
     }
 }
