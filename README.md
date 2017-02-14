@@ -15,6 +15,8 @@ To build for release
 - [ ] Deploy to anonymousrabbi.ibraheemaj.xyz
 - [ ] Setup SSL to server
 - [x] AngularJS FrontEnd basic setup
+- [x] Keycloak setup
+- [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
 - [ ] Database basic setup and MongoKitten/Redbird setup
 
