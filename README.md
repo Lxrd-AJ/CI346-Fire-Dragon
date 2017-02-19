@@ -11,11 +11,11 @@ To build for release
 - [x] Setup Project
 - [x] Implement tests
 - [x] Setup deployment scripts
-- [ ] Setup Jenkins deployment
+- [x] Setup Jenkins deployment
 - [ ] Deploy to anonymousrabbi.ibraheemaj.xyz
 - [ ] Setup SSL to server
 - [x] AngularJS FrontEnd basic setup
-- [x] Keycloak setup
+- [ ] Keycloak setup
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
 - [ ] Database basic setup and MongoKitten/Redbird setup
