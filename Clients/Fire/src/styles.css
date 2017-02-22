@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4, h5 , h6 {
+    font-weight: 300;
+}
+
+body {
+    text-align: center;
+    font-weight: 300;
+    background-color: white;
+}
+
+a:hover { text-decoration: none; }
+
+a.md-raised-button {
+    text-decoration: none !important;
+}

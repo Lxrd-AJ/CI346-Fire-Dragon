@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello Cruel World';
+    date = new Date().getFullYear();
+    author = "Ibraheem AJ"
 }

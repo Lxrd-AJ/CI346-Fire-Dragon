@@ -1,4 +1,13 @@
-<div>
-    <h1>{{title}}</h1>
-    <button md-raised-button>Click me!</button>
+<div class="container-fluid">
+    <div><navigation></navigation></div>
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div>
+        <footer class="footer fixed-bottom">
+            Copyright {{date}}, {{author}}
+        </footer>
+    </div>
 </div>
