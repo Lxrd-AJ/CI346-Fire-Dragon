@@ -12,11 +12,12 @@ To build for release
 - [x] Implement tests
 - [x] Setup deployment scripts
 - [x] Setup Jenkins deployment
-- [ ] Deploy to anonymousrabbi.ibraheemaj.xyz
+- [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
 - [ ] Setup SSL to server
 - [x] AngularJS FrontEnd basic setup
 - [ ] Keycloak setup
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
 - [ ] Database basic setup and MongoKitten/Redbird setup
+- [ ] Employee Model CRUD
 
