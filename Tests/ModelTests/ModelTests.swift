@@ -1,15 +1,15 @@
 import XCTest
-@testable import Database
+@testable import Models
 
-class DatabaseTest : XCTestCase {
+class ModelTest : XCTestCase {
     func testExampleTest(){
         let db = DB()
         XCTAssertEqual( db.num, 100, "Correct DB number used" )
     }
 }
 
-extension DatabaseTest {
-    static var allTests: [(String,(DatabaseTest) -> () throws -> Void)] {
+extension ModelTest {
+    static var allTests: [(String,(ModelTest) -> () throws -> Void)] {
         return [
             ("testExampleTest",testExampleTest)
         ]

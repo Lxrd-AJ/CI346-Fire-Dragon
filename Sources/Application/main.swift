@@ -1,7 +1,7 @@
 import Kitura
 import HeliumLogger
 import Core
-import Database
+import Models
 
 HeliumLogger.use()
 

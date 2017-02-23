@@ -1,8 +1,8 @@
 import XCTest
 @testable import CoreTests
-@testable import DatabaseTests
+@testable import ModelTests
 
 XCTMain([
     testCase(ServerTest.allTests),
-    testCase(DatabaseTest.allTests)
+    testCase(ModelTests.allTests)
 ])
