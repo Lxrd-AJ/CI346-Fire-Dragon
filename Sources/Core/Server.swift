@@ -6,11 +6,7 @@ import Models
 import SwiftyJSON
 import LoggerAPI
 
-/**
-- TODO
-    * Use the static directory specified by the environment
-    * Use the DB details specified by Env
-*/
+
 public class Server{
 
     public let router:Router
@@ -43,11 +39,6 @@ public class Server{
         router.all("/", middleware: BodyParser())
         router.route("employee")
             .get(handler: getEmployeeHandler)
-
-        //Test
-//        var employee = Employee(name:"John Appleseed", age: 500);
-//        do { try employee.save() }catch{ print(error) }
-//        print(employee.id as Any);
 
     }
 

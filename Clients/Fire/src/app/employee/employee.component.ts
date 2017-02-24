@@ -1,23 +1,23 @@
 import { Component, OnInit, Inject, ViewChild, TemplateRef } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { AddEmployeeDialogComponent } from '../add-employee-dialog/add-employee-dialog.component';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'employee',
   templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+  styleUrls: ['./employee.component.css'],
+  providers: [EmployeeService]
 })
 export class EmployeeComponent implements OnInit {
 
-    employees = [
-        { name: 'John AppleSeed', reason: 'Too much sauce'}
-    ];
+    employees: any[] = [];
     notes = [
         { name: 'One Punch Man', date: new Date() }
     ];
 
 
-  constructor( public employeeDialog:MdDialog ) { }
+  constructor( public employeeDialog:MdDialog, private employeeService:EmployeeService ) { }
 
     launchDialog(){
         let dialogRef = this.employeeDialog.open(AddEmployeeDialogComponent, {
@@ -33,6 +33,10 @@ export class EmployeeComponent implements OnInit {
     }
 
   ngOnInit() {
+      this.employeeService.getEmployees().then((employees) => {
+          console.log(employees);
+          this.employees = employees
+      });
   }
 
 }

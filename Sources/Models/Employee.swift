@@ -57,11 +57,6 @@ public class Employee: Entity {
 extension Employee {
     public func toJSON() -> JSON {
         let mirror = Mirror(reflecting: self)
-//        let x = mirror.children.enumerated().reduce(JSON([])){ prevJSON, attribute in
-//            let attrJSON: JSON = [ (attribute.element.label as String!) : attribute.element.value ]
-//            return prevJSON.merged(with: attrJSON)
-//        } //prevJSON:JSON, attribute:Mirror.Child
-//        print(x)
         var json = JSON([:])
         for (_,attribute) in mirror.children.enumerated() {
             var _json: JSON;
