@@ -3,6 +3,8 @@ import Fluent
 import FluentMongo
 import MongoKitten
 import Models
+import SwiftyJSON
+import LoggerAPI
 
 /**
 - TODO
@@ -13,42 +15,53 @@ public class Server{
 
     public let router:Router
     public let port:Int = 8090
-    let staticServer = StaticFileServer(path: "./Clients/Fire/dist/")
-
-    public init() {
-        router = Router()
-        router.all("/", middleware: staticServer);
-        //router.get("/", middleware: staticServer, handler: tempHandler)
-
+    let staticServer: StaticFileServer
+    var environment: Environment
+    lazy var mongoDriver: MongoDriver? = {
         do{
-            let mongo = try MongoDriver(database: "test", user: "", password: "", host: "localhost", port:27017 )
-            Database.default = Database(mongo)
-
-            //Test
-            var employee = Employee(name:"John Appleseed", age: 50);
-            try employee.save()
-            print(employee.id as Any);
+            let driver = try MongoDriver(database: self.environment.database["Database"]!,
+                    user: self.environment.database["User"]!,
+                    password: self.environment.database["Password"]!,
+                    host: self.environment.database["Host"]!,
+                    port: Int(self.environment.database["Port"]!)! )
+            return driver
         }catch {
+            print("Failed to connect to MongoDB database" )
             print(error)
         }
+        return nil;
+    }()
+
+
+    public init(environment env: Environment) {
+        self.environment = env
+        staticServer = StaticFileServer(path: self.environment.publicDirectory)
+        router = Router()
+        Database.default = Database(self.mongoDriver!)
+
+        router.all("/", middleware: staticServer);
+        router.all("/", middleware: BodyParser())
+        router.route("employee")
+            .get(handler: getEmployeeHandler)
+
+        //Test
+//        var employee = Employee(name:"John Appleseed", age: 500);
+//        do { try employee.save() }catch{ print(error) }
+//        print(employee.id as Any);
+
     }
 
-    func tempHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){
+
+    func getEmployeeHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){
         do{
-            try response.send(fileName: "index.html")
+            let users: [Employee] = try Employee.query().all()
+            Log.info("Sending \(users.count) employees")
+            response.status(.OK).send(json: JSON(users.map({ $0.toJSON() })) )
         }catch{
-            print(error);
-            print("Failed to send index.html")
-            response.send("Failed to server web app")
+            print(error)
         }
-        defer { next(); }
+        defer { next() }
     }
 
-//    func getWebClient(request:RouterRequest, response:RouterResponse, next:() -> Void) throws {
-//        try response.send(fileName:"index.html")
-//        response.send("Hello World!")
-//        defer {
-//            next()
-//        }
-//    }
+
 }
