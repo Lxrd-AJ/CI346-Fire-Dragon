@@ -1,12 +1,25 @@
-<h1 md-dialog-title>Hello World</h1>
+<h1 md-dialog-title>Employee Editor</h1>
 <md-dialog-content>
-    <p>
-      add-employee-dialog works!
-    </p>
-    <button md-raised-button color="primary" md-dialog-close (click)="dialogRef.close(true)">Ok</button>
-    <button md-raised-button color="warn" md-dialog-close (click)="dialogRef.close()">Close</button>
+    <form>
+        <md-input-container class="">
+            <input mdInput placeholder="Employee Name" [(ngModel)]="model.name" name="name" required>
+        </md-input-container>
+
+        <md-input-container class="">
+            <input mdInput placeholder="Age" required type="number" [(ngModel)]="model.age" name="age">
+        </md-input-container>
+
+        <md-input-container class="">
+            <input mdInput placeholder="Email (Not in Use)" type="email">
+        </md-input-container>
+
+        <div>
+            <button md-raised-button color="primary" md-dialog-close (click)="dialogRef.close(model)">Ok</button>
+            <button md-raised-button color="warn" md-dialog-close (click)="dialogRef.close()">Close</button>
+        </div>
+
+        <p style="color:green">
+            {{diagnostic}}
+        </p>
+    </form>
 </md-dialog-content>
-
-<md-dialog-actions>
-
-</md-dialog-actions>

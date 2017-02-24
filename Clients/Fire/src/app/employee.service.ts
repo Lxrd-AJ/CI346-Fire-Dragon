@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import { environment } from '../environments/environment';
+import { Employee } from './models/employee';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
@@ -10,7 +11,7 @@ export class EmployeeService {
 
   getEmployees(){
     return this.http.get('employee').toPromise()
-                .then(response => response.json() as any[])
+                .then(response => response.json() as Employee[])
                 .catch(this.handleError)
   }
 

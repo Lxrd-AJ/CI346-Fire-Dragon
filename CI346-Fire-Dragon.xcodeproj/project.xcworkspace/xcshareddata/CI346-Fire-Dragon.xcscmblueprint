@@ -4,17 +4,29 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7" : 9223372036854775807,
+    "6D97D4B483B8E6FBDAB97542CDC1060DC541B0C5" : 9223372036854775807,
+    "65880DAFEE5F57D1D1C181560E763EECFD96B06D" : 9223372036854775807,
+    "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : 9223372036854775807,
     "40635794C1929E96A4709153927459486D34FA7B" : 9223372036854775807,
     "43425688648679ECEC3105C3812E3C82D04FD563" : 9223372036854775807,
     "77528AA6C8B451D66547916CA3CB970C85CBD7B4" : 9223372036854775807,
-    "6D97D4B483B8E6FBDAB97542CDC1060DC541B0C5" : 9223372036854775807
+    "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : 9223372036854775807,
+    "43C021D2F0E746BBB29CA4E06229F111196D4871" : 9223372036854775807,
+    "6D09577DC770D433CEBE622BD4B45C8CF6CB8CCC" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "275DF44D-72DA-40E7-8D5C-07CFD583F61C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7" : "CI346-Fire-Dragon\/Packages\/BSON-3.7.2\/",
+    "6D97D4B483B8E6FBDAB97542CDC1060DC541B0C5" : "CI346-Fire-Dragon\/",
+    "65880DAFEE5F57D1D1C181560E763EECFD96B06D" : "CI346-Fire-Dragon\/Packages\/Fluent-1.4.0\/",
+    "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : "CI346-Fire-Dragon\/Packages\/HeliumLogger-1.4.0\/",
     "40635794C1929E96A4709153927459486D34FA7B" : "CI346-Fire-Dragon\/Packages\/Kitura-net-1.4.3\/",
     "43425688648679ECEC3105C3812E3C82D04FD563" : "CI346-Fire-Dragon\/Packages\/Kitura-1.4.4\/",
-    "77528AA6C8B451D66547916CA3CB970C85CBD7B4" : "CI346-Fire-Dragon\/Packages\/SSLService-0.12.20\/",
-    "6D97D4B483B8E6FBDAB97542CDC1060DC541B0C5" : "CI346-Fire-Dragon\/"
+    "77528AA6C8B451D66547916CA3CB970C85CBD7B4" : "CI346-Fire-Dragon\/Packages\/SSLService-0.12.21\/",
+    "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : "CI346-Fire-Dragon\/Packages\/MongoKitten-1.7.4\/",
+    "43C021D2F0E746BBB29CA4E06229F111196D4871" : "CI346-Fire-Dragon\/Packages\/Socket-0.12.30\/",
+    "6D09577DC770D433CEBE622BD4B45C8CF6CB8CCC" : "CI346-Fire-Dragon\/Packages\/Polymorphic-1.0.1\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CI346-Fire-Dragon",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -31,14 +43,44 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43425688648679ECEC3105C3812E3C82D04FD563"
     },
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/BlueSocket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "43C021D2F0E746BBB29CA4E06229F111196D4871"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vapor\/fluent.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "65880DAFEE5F57D1D1C181560E763EECFD96B06D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/OpenKitten\/BSON.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vapor\/polymorphic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6D09577DC770D433CEBE622BD4B45C8CF6CB8CCC"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lxrd-AJ\/CI346-Fire-Dragon.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6D97D4B483B8E6FBDAB97542CDC1060DC541B0C5"
     },
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/OpenKitten\/MongoKitten.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/BlueSSLService.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77528AA6C8B451D66547916CA3CB970C85CBD7B4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/HeliumLogger.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "92AF87893551AD3F2DEE78BEF3E924B9C5659E09"
     }
   ]
 }

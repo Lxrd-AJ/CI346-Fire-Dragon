@@ -14,11 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_143"
-=======
-               BlueprintIdentifier = "OBJ_144"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_348"
                BuildableName = "LoggerAPI.framework"
                BlueprintName = "LoggerAPI"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -32,11 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_150"
-=======
-               BlueprintIdentifier = "OBJ_151"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_355"
                BuildableName = "Socket.framework"
                BlueprintName = "Socket"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -50,11 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_159"
-=======
-               BlueprintIdentifier = "OBJ_160"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_364"
                BuildableName = "SSLService.framework"
                BlueprintName = "SSLService"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -68,11 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_168"
-=======
-               BlueprintIdentifier = "OBJ_169"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_373"
                BuildableName = "CHTTPParser.framework"
                BlueprintName = "CHTTPParser"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -86,11 +70,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_183"
-=======
-               BlueprintIdentifier = "OBJ_184"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_388"
                BuildableName = "KituraNet.framework"
                BlueprintName = "KituraNet"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -104,11 +84,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_232"
-=======
-               BlueprintIdentifier = "OBJ_233"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_437"
                BuildableName = "SwiftyJSON.framework"
                BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -122,11 +98,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_240"
-=======
-               BlueprintIdentifier = "OBJ_241"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_445"
                BuildableName = "KituraTemplateEngine.framework"
                BlueprintName = "KituraTemplateEngine"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -140,11 +112,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_247"
-=======
-               BlueprintIdentifier = "OBJ_248"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_452"
                BuildableName = "Kitura.framework"
                BlueprintName = "Kitura"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -158,11 +126,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_309"
-=======
-               BlueprintIdentifier = "OBJ_310"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_514"
                BuildableName = "HeliumLogger.framework"
                BlueprintName = "HeliumLogger"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -176,11 +140,231 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_318"
-=======
-               BlueprintIdentifier = "OBJ_319"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_523"
+               BuildableName = "PathIndexable.framework"
+               BlueprintName = "PathIndexable"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_531"
+               BuildableName = "Polymorphic.framework"
+               BlueprintName = "Polymorphic"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_539"
+               BuildableName = "Node.framework"
+               BlueprintName = "Node"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_571"
+               BuildableName = "Fluent.framework"
+               BlueprintName = "Fluent"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_618"
+               BuildableName = "FluentTester.framework"
+               BlueprintName = "FluentTester"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_640"
+               BuildableName = "BSON.framework"
+               BlueprintName = "BSON"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_666"
+               BuildableName = "Socks.framework"
+               BlueprintName = "Socks"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_679"
+               BuildableName = "SocksCore.framework"
+               BlueprintName = "SocksCore"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_700"
+               BuildableName = "MongoCryptoEssentials.framework"
+               BlueprintName = "MongoCryptoEssentials"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_734"
+               BuildableName = "MongoHMAC.framework"
+               BlueprintName = "MongoHMAC"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_749"
+               BuildableName = "MongoKitten.framework"
+               BlueprintName = "MongoKitten"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_783"
+               BuildableName = "MongoMD5.framework"
+               BlueprintName = "MongoMD5"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_786"
+               BuildableName = "MongoPBKDF2.framework"
+               BlueprintName = "MongoPBKDF2"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_788"
+               BuildableName = "MongoSCRAM.framework"
+               BlueprintName = "MongoSCRAM"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_790"
+               BuildableName = "MongoSHA1.framework"
+               BlueprintName = "MongoSHA1"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_853"
+               BuildableName = "FluentMongo.framework"
+               BlueprintName = "FluentMongo"
+               ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_895"
                BuildableName = "Application"
                BlueprintName = "Application"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -194,11 +378,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_346"
-=======
-               BlueprintIdentifier = "OBJ_347"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_957"
                BuildableName = "Core.framework"
                BlueprintName = "Core"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -212,13 +392,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_348"
-=======
-               BlueprintIdentifier = "OBJ_349"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
-               BuildableName = "Database.framework"
-               BlueprintName = "Database"
+               BlueprintIdentifier = "OBJ_955"
+               BuildableName = "Models.framework"
+               BlueprintName = "Models"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -234,11 +410,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_397"
-=======
-               BlueprintIdentifier = "OBJ_398"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
+               BlueprintIdentifier = "OBJ_1074"
                BuildableName = "CoreTests.xctest"
                BlueprintName = "CoreTests"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
@@ -248,13 +420,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "OBJ_424"
-=======
-               BlueprintIdentifier = "OBJ_425"
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
-               BuildableName = "DatabaseTests.xctest"
-               BlueprintName = "DatabaseTests"
+               BlueprintIdentifier = "OBJ_1135"
+               BuildableName = "ModelTests.xctest"
+               BlueprintName = "ModelTests"
                ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -272,28 +440,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-<<<<<<< HEAD
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_318"
-            BuildableName = "Application"
-            BlueprintName = "Application"
-            ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-=======
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_144"
+            BlueprintIdentifier = "OBJ_348"
             BuildableName = "LoggerAPI.framework"
             BlueprintName = "LoggerAPI"
             ReferencedContainer = "container:CI346-Fire-Dragon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
->>>>>>> de84013ee308201c849eca6ed26ab9ef6a32845f
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
