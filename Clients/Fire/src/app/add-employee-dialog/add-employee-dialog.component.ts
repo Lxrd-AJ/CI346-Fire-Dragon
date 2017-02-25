@@ -14,8 +14,6 @@ export class AddEmployeeDialogComponent implements OnInit {
 
     constructor(public dialogRef: MdDialogRef<AddEmployeeDialogComponent>) {
         this.model = dialogRef.config.data as Employee
-        console.info("Dialog Employee object")
-        console.info(this.model);
     }
 
     ngOnInit() {
@@ -23,10 +21,11 @@ export class AddEmployeeDialogComponent implements OnInit {
 
     onSubmit(){
         this.submitted = true;
+        this.dialogRef.close(this.model)
     }
+
 
     get diagnostic() { return JSON.stringify(this.model); }
 
 }
 
-//Continue at Track control state and validity with ngModel => https://angular.io/docs/ts/latest/guide/forms.html

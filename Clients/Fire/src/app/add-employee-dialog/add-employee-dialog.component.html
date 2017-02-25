@@ -1,20 +1,29 @@
 <h1 md-dialog-title>Employee Editor</h1>
 <md-dialog-content>
-    <form>
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
         <md-input-container class="">
-            <input mdInput placeholder="Employee Name" [(ngModel)]="model.name" name="name" required>
+            <input mdInput placeholder="Employee Name" [(ngModel)]="model.name" name="name" #name="ngModel" required>
         </md-input-container>
 
         <md-input-container class="">
-            <input mdInput placeholder="Age" required type="number" [(ngModel)]="model.age" name="age">
+            <input mdInput placeholder="Age" required type="number" min="1" [(ngModel)]="model.age" name="age" #ageSpy="ngModel">
         </md-input-container>
 
         <md-input-container class="">
             <input mdInput placeholder="Email (Not in Use)" type="email">
         </md-input-container>
 
+        <div class="error-messages">
+            <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+                Your name cannot be empty
+            </div>
+            <div [hidden]="ageSpy.valid || ageSpy.pristine" class="alert alert-danger">
+                Your age isn't legit
+            </div>
+        </div>
+
         <div>
-            <button md-raised-button color="primary" md-dialog-close (click)="dialogRef.close(model)">Ok</button>
+            <button md-raised-button color="primary" md-dialog-close type="submit" [disabled]="!employeeForm.form.valid">Ok</button>
             <button md-raised-button color="warn" md-dialog-close (click)="dialogRef.close()">Close</button>
         </div>
 

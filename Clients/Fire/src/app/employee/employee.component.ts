@@ -26,15 +26,21 @@ export class EmployeeComponent implements OnInit {
             height: '40%',
             disableClose: true,
             //position: {top: '-50', bottom: '50', left: '-50', right: '50' },
-            data: new Employee("","",0) //Replace with single employee if editing
+            data: new Employee("","",null) 
         });
-        dialogRef.afterClosed().subscribe(employee => {
-            console.log(employee);
+        dialogRef.afterClosed().subscribe(emp=> {
+            console.info("`afterClosed` message from dialog ---")
+            //NB: emp is always undefined, most likely due to a bug in angular that doen't return the passed data
+            //so we shall take the object directly from the dialog
+            const employee: Employee = dialogRef.componentInstance.model;
+            this.employees.unshift(employee);
         })
+        
     }
 
-  ngOnInit() {
-      this.employeeService.getEmployees().then((employees) => this.employees = employees);
-  }
+
+    ngOnInit() {
+        this.employeeService.getEmployees().then((employees) => this.employees = employees);
+    }
 
 }

@@ -42,6 +42,11 @@ public class Server{
 
     }
 
+    //TODO: All Employee Related route handlers should be moved to an EmployeeHandler class eventually
+
+    func postEmployeeHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){
+
+    }
 
     func getEmployeeHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){
         do{
