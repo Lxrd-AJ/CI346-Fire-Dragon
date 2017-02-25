@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="!isLoading">
     <h2 class="clearfix">
         Manage Employees
         <span class="float-right">
@@ -20,4 +20,8 @@
             <p md-line> {{note.updated | date}} </p>
         </md-list-item>
     </md-list>
+</div>
+
+<div *ngIf="isLoading" class="row justify-content-center">
+    <md-spinner></md-spinner>
 </div>

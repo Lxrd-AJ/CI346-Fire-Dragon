@@ -39,13 +39,43 @@ public class Server{
         router.all("/", middleware: BodyParser())
         router.route("employee")
             .get(handler: getEmployeeHandler)
+            .post(handler: postEmployeeHandler)
 
     }
 
     //TODO: All Employee Related route handlers should be moved to an EmployeeHandler class eventually
-
     func postEmployeeHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){
+        guard let parsedBody = request.body else {
+            response.status(.badRequest).send("")
+            return
+        }
+        switch (parsedBody){
+            case .json(let jsonBody):
+                guard let employeeJSON = jsonBody["employee"] as JSON? else {
+                    response.status(.badRequest).send("Bad request")
+                    return;
+                }
+                print(employeeJSON.object)
+                print(type(of: employeeJSON))
 
+                if( employeeJSON["id"].exists() && !employeeJSON["id"].string!.isEmpty){
+                    print("Exsting object")
+                }else{
+                    do{
+                        var employee = Employee.from(JSON: employeeJSON)
+                        try employee.save()
+                        Log.info("Created new Employee object \(employee.id)")
+                        response.status(.OK).send(json: employee.toJSON() )
+                    }catch {
+                        Log.error("An Error occurred saving the Employee Object")
+                        print(error)
+                        response.status(.badRequest).send("Error Saving object")
+                    }
+                }
+                break;
+            default: break
+        }
+        defer{ next() }
     }
 
     func getEmployeeHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){

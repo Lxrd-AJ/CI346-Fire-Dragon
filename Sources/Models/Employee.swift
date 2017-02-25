@@ -70,6 +70,13 @@ extension Employee {
         }
         return json;
     }
+
+    public static func from(JSON json: JSON) -> Employee {
+        return Employee(
+                name: json["name"].string ?? "",
+                age: json["age"].int ?? -1
+        )
+    }
 }
 
 extension JSON {

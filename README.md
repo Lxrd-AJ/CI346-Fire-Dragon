@@ -18,6 +18,7 @@ To build for release
 - [ ] Keycloak setup
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
-- [ ] Database basic setup and MongoKitten/Redbird setup
+- [x] Database basic setup and MongoKitten/Redbird setup
 - [ ] Employee Model CRUD
+- [ ] Documentation using Jazzy https://github.com/realm/jazzy
 
