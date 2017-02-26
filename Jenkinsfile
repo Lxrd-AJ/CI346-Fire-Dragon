@@ -1,14 +1,15 @@
 node {
-    stage "Testing"
-        checkout scm
-        docker.image('ibmcom/swift-ubuntu:latest').inside {
-            stage "Test server app"
-                sh "swift test"
-        }
+    // stage "Testing"
+    //     checkout scm
+    //     docker.image('ibmcom/swift-ubuntu:latest').inside {
+    //         stage "Test server app"
+    //             sh "swift test"
+    //     }
 
     stage "Container build"
         checkout scm
-        def environment = docker.build "ci346-fire-dragon"
+        def container = docker.build "ci346-fire-dragon"
+        container.push 'master'
         // environment.inside {
         //     stage "Docker -> Test"
         //         sh "swift test"
