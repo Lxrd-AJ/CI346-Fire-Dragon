@@ -1,10 +1,10 @@
 node {
-    // stage "Testing"
-    //     docker.image('ibmcom/swift-ubuntu:latest').inside {
-    //         checkout scm
-    //         stage "Test server app"
-    //             sh "swift test"
-    //     }
+    stage "Testing"
+        docker.image('ibmcom/swift-ubuntu:latest').inside {
+            checkout scm
+            stage "Test server app"
+                sh "swift test"
+        }
 
     stage "Container build"
         checkout scm
