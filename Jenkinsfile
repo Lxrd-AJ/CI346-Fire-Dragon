@@ -13,13 +13,14 @@ pipeline {
             }
         }
 
-        stage("-> Ubuntu Swift Container"){
-            docker.image('ibmcom/swift-ubuntu:latest').inside {
+        stage("-> Ubuntu Swift Container: Testing"){
+            def environment = docker.build "test-container"
+            environment.inside {
                 stage("Docker -> Test"){
                     sh "swift test"
                 }
-
             }
+            //docker.image('ibmcom/swift-ubuntu:latest').inside {}
         }
 
         // stage("Test"){
