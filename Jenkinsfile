@@ -8,8 +8,8 @@ node {
 
     stage "Container build"
         checkout scm
-        def container = docker.build "ci346-fire-dragon"
-        container.push 'master'
+        def container = docker.build "ci346-fire-dragon:latest"
+        container.run('--name ci346-fire-dragon -d -p 80:8090')
         // environment.inside {
         //     stage "Docker -> Test"
         //         sh "swift test"
