@@ -1,12 +1,14 @@
 node {
     stage "Testing"
-        docker.image('ibmcom/swift-ubuntu:latest').withRun('-u root') { 
-            checkout scm
-            stage "Test server app"
-                //sh "whoami"
-                sh "pwd"
-                sh "ls"
-                sh "swift test"
+        docker.image('ibmcom/swift-ubuntu:latest').withRun('-u root') {
+            dir('root'){
+                checkout scm
+                stage "Test server app"
+                    sh "cat /etc/*-release"
+                    sh "pwd"
+                    sh "ls"
+                    sh "swift test"
+            }
         }
 
     stage "Container build"
