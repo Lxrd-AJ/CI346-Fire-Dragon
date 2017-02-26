@@ -2,9 +2,9 @@ FROM ibmcom/swift-ubuntu:latest
 EXPOSE 80
 USER root
 
-RUN apt-get update
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
-RUN apt-get -y install nodejs
+#RUN apt-get update
+#RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+#RUN apt-get -y install nodejs
 
 RUN cd /root
 COPY . /root
