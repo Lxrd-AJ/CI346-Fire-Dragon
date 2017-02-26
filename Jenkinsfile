@@ -9,9 +9,15 @@ node {
     stage "Container build"
         checkout scm
         def container = docker.build "ci346-fire-dragon:latest"
-        stage "Cleanup"
-            sh "docker rm -f $(docker ps -a -q --filter name=ci346-fire-dragon)"
-        container.run('--name ci346-fire-dragon -d -p 8090:80')
+        try{
+            container.run('--name ci346-fire-dragon -d -p 8090:80')
+        }catch(error){
+            stage "Cleanup"
+                sh "docker rm -f $(docker ps -a -q --filter name=ci346-fire-dragon)"
+        }finally{
+            container.run('--name ci346-fire-dragon -d -p 8090:80')
+        }
+
 }
 
 
