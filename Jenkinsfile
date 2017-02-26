@@ -1,6 +1,6 @@
 node {
     stage "Testing"
-        docker.image('ibmcom/swift-ubuntu:latest').inside() { //withRun
+        docker.image('ibmcom/swift-ubuntu:latest').withRun('-u root') { 
             checkout scm
             stage "Test server app"
                 //sh "whoami"
