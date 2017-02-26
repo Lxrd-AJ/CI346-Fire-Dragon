@@ -1,0 +1,17 @@
+
+div {
+    width: auto;
+    height: auto;
+}
+
+h1 {
+    font-size: 5em;
+    margin-top: 1.5em;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 3em;
+    margin-top: 1em;
+    font-weight: 200;
+}
