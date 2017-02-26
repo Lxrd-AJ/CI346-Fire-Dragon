@@ -4,6 +4,8 @@ node {
             checkout scm
             stage "Test server app"
                 //sh "whoami"
+                sh "pwd"
+                sh "ls"
                 sh "swift test"
         }
 
