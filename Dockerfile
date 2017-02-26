@@ -1,5 +1,5 @@
 FROM ibmcom/swift-ubuntu:latest
-EXPOSE 8080
+EXPOSE 80
 USER root
 
 RUN apt-get update

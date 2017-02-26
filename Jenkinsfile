@@ -9,7 +9,7 @@ node {
     stage "Container build"
         checkout scm
         def container = docker.build "ci346-fire-dragon:latest"
-        container.run('--name ci346-fire-dragon -d -p 80:8090')
+        container.run('--name ci346-fire-dragon -d -p 8090:80')
 }
 
 
