@@ -3,7 +3,7 @@ node {
         docker.image('ibmcom/swift-ubuntu:latest').inside() { //withRun
             checkout scm
             stage "Test server app"
-                sh "whoami"
+                //sh "whoami"
                 sh "swift test"
         }
 
