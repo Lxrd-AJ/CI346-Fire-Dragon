@@ -13,7 +13,7 @@ node {
             container.run('--name ci346-fire-dragon -d -p 8090:80')
         }catch(error){
             stage "Cleanup"
-                sh "docker rm -f $(docker ps -a -q --filter name=ci346-fire-dragon)"
+                sh "docker rm -f ${"\$(docker ps -a -q --filter name=ci346-fire-dragon)"}"
         }finally{
             container.run('--name ci346-fire-dragon -d -p 8090:80')
         }
