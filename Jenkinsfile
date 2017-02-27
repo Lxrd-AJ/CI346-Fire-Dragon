@@ -1,17 +1,18 @@
 node {
-    stage "Testing"
-        docker.image('ibmcom/swift-ubuntu:latest').withRun('-u root') {
-            dir('root'){
-                checkout scm
-                stage "Test server app"
-                    sh "cat /etc/*-release"
-                    sh "pwd"
-                    sh "ls"
-                    sh "swift test"
-            }
-        }
+    // stage "Testing"
+    //     docker.image('ibmcom/swift-ubuntu:latest').withRun('-u root') {
+    //         dir('root'){
+    //             checkout scm
+    //             stage "Test server app"
+    //                 sh "cat /etc/*-release"
+    //                 sh "pwd"
+    //                 sh "ls"
+    //                 sh "swift test"
+    //         }
+    //     }
 
     stage "Container build"
+        //TODO: Consider using Docker Compose if this keeps breaking
         checkout scm
         def container = docker.build "ci346-fire-dragon:latest"
         try{
@@ -20,7 +21,7 @@ node {
             stage "Cleanup"
                 sh "docker rm -f ${"\$(docker ps -a -q --filter name=ci346-fire-dragon)"}"
         }finally{
-            container.run('--name ci346-fire-dragon -d -p 8090:80')
+            container.run('--name ci346-fire-dragon -d -p 8090:80 -p 27017:27017')
         }
 
 }
