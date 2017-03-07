@@ -44,6 +44,10 @@ public class Server{
     }
 
     //TODO: All Employee Related route handlers should be moved to an EmployeeHandler class eventually
+    /**
+    - Creates a new employee
+    - TODO: Updates an existing employee
+    */
     func postEmployeeHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){
         guard let parsedBody = request.body else {
             response.status(.badRequest).send("")
@@ -60,6 +64,7 @@ public class Server{
 
                 if( employeeJSON["id"].exists() && !employeeJSON["id"].string!.isEmpty){
                     print("Exsting object")
+                    //TODO: Update Existing employee object
                 }else{
                     do{
                         var employee = Employee.from(JSON: employeeJSON)
@@ -78,6 +83,10 @@ public class Server{
         defer{ next() }
     }
 
+    /**
+    - Retrieve all Employees
+    - TODO: Retrieve an Employee if the :id parameter present in request
+    */
     func getEmployeeHandler(request:RouterRequest, response:RouterResponse, next:() -> Void){
         do{
             let users: [Employee] = try Employee.query().all()

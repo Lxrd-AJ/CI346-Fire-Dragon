@@ -12,6 +12,7 @@ To build for release
 - [x] Implement tests
 - [x] Setup deployment scripts
 - [x] Setup Jenkins deployment
+- [ ] Docker Compose setup
 - [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
 - [ ] Setup SSL to server
 - [x] AngularJS FrontEnd basic setup
@@ -19,6 +20,8 @@ To build for release
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
 - [x] Database basic setup and MongoKitten/Redbird setup
-- [ ] Employee Model CRUD
+- [ ] Employee Model CR-UD
+- [ ] Employee Shift CRUD
+- [ ] Employee - Shift REST API mapping
 - [ ] Documentation using Jazzy https://github.com/realm/jazzy
 

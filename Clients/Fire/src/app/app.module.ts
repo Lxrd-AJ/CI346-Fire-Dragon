@@ -12,6 +12,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { AddEmployeeDialogComponent } from './add-employee-dialog/add-employee-dialog.component';
+import { ShiftComponent } from './shift/shift.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AddEmployeeDialogComponent } from './add-employee-dialog/add-employee-d
     NavigationComponent,
     HomeComponent,
     EmployeeComponent,
-    AddEmployeeDialogComponent
+    AddEmployeeDialogComponent,
+    ShiftComponent
   ],
   imports: [
     MaterialModule.forRoot(),

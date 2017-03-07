@@ -8,9 +8,10 @@ let package = Package(
         Target(name:"Models")
     ],
     dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 1, minor: 4),
+        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 6),
+        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 1, minor: 6),
         .Package(url: "https://github.com/vapor/fluent.git", majorVersion: 1, minor: 4),
+        //.Package(url: "https://github.com/vapor/fluent.git", Version(2,0,0, prereleaseIdentifiers: ["alpha"], buildMetadataIdentifier: "11")),
         .Package(url: "https://github.com/vapor/mongo-driver.git", majorVersion: 1, minor: 0)
     ]
 )

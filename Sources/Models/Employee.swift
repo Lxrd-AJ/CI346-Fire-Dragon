@@ -79,27 +79,3 @@ extension Employee {
     }
 }
 
-extension JSON {
-    mutating func merge(other: JSON) {
-        if self.type == other.type {
-            switch self.type {
-            case .dictionary:
-                for (key, _) in other {
-                    self[key].merge(other: other[key])
-                }
-            case .array:
-                self = JSON(self.arrayValue + other.arrayValue)
-            default:
-                self = other
-            }
-        } else {
-            self = other
-        }
-    }
-
-    func merged(with: JSON) -> JSON {
-        var merged = self
-        merged.merge(other: with)
-        return merged
-    }
-}
