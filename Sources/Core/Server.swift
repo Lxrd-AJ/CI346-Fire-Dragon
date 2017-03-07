@@ -22,7 +22,7 @@ public class Server{
                     port: Int(self.environment.database["Port"]!)! )
             return driver
         }catch {
-            print("Failed to connect to MongoDB database" )
+            Log.error("Failed to connect to MongoDB database" )
             print(error)
         }
         return nil;
