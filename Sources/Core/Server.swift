@@ -41,6 +41,10 @@ public class Server{
             .get(handler: getEmployeeHandler)
             .post(handler: postEmployeeHandler)
 
+        router.route("shift")
+            .post(handler: ShiftHandler.postShiftHandler)
+            .get(handler: ShiftHandler.getShiftHandler)
+
     }
 
     //TODO: All Employee Related route handlers should be moved to an EmployeeHandler class eventually

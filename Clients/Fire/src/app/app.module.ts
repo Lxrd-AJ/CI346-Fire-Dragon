@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { AddEmployeeDialogComponent } from './add-employee-dialog/add-employee-dialog.component';
 import { ShiftComponent } from './shift/shift.component';
+import { AddShiftDialogComponent } from './add-shift-dialog/add-shift-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShiftComponent } from './shift/shift.component';
     HomeComponent,
     EmployeeComponent,
     AddEmployeeDialogComponent,
-    ShiftComponent
+    ShiftComponent,
+    AddShiftDialogComponent
   ],
   imports: [
     MaterialModule.forRoot(),
@@ -31,7 +33,7 @@ import { ShiftComponent } from './shift/shift.component';
     HttpModule
   ],
   providers: [],
-  entryComponents: [AddEmployeeDialogComponent],
+  entryComponents: [AddEmployeeDialogComponent, AddShiftDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

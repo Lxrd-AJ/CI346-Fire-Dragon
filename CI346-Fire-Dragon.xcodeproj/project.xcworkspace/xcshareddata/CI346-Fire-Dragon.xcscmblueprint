@@ -10,6 +10,7 @@
     "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : 9223372036854775807,
     "40635794C1929E96A4709153927459486D34FA7B" : 9223372036854775807,
     "43425688648679ECEC3105C3812E3C82D04FD563" : 9223372036854775807,
+    "EE0211841CDBC942EFB5905580DF4AA57B5992F6" : 9223372036854775807,
     "77528AA6C8B451D66547916CA3CB970C85CBD7B4" : 9223372036854775807,
     "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : 9223372036854775807,
     "43C021D2F0E746BBB29CA4E06229F111196D4871" : 9223372036854775807,
@@ -19,13 +20,14 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "686ABC7D4D16AC8C2BF9FA66CA941F6EB6F984F7" : "CI346-Fire-Dragon\/Packages\/BSON-3.7.2\/",
     "6D97D4B483B8E6FBDAB97542CDC1060DC541B0C5" : "CI346-Fire-Dragon\/",
-    "65880DAFEE5F57D1D1C181560E763EECFD96B06D" : "CI346-Fire-Dragon\/Packages\/Fluent-1.4.0\/",
-    "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : "CI346-Fire-Dragon\/Packages\/HeliumLogger-1.4.0\/",
+    "65880DAFEE5F57D1D1C181560E763EECFD96B06D" : "CI346-Fire-Dragon\/Packages\/Fluent-1.4.1\/",
+    "92AF87893551AD3F2DEE78BEF3E924B9C5659E09" : "CI346-Fire-Dragon\/Packages\/HeliumLogger-1.6.0\/",
     "40635794C1929E96A4709153927459486D34FA7B" : "CI346-Fire-Dragon\/Packages\/Kitura-net-1.4.3\/",
-    "43425688648679ECEC3105C3812E3C82D04FD563" : "CI346-Fire-Dragon\/Packages\/Kitura-1.4.4\/",
+    "43425688648679ECEC3105C3812E3C82D04FD563" : "CI346-Fire-Dragon\/Packages\/Kitura-1.6.2\/",
+    "EE0211841CDBC942EFB5905580DF4AA57B5992F6" : "CI346-Fire-Dragon\/Packages\/Node-1.0.1\/",
     "77528AA6C8B451D66547916CA3CB970C85CBD7B4" : "CI346-Fire-Dragon\/Packages\/SSLService-0.12.21\/",
     "6F592973CDAFC6396CA0DD0B7DAC14E5B55161D2" : "CI346-Fire-Dragon\/Packages\/MongoKitten-1.7.4\/",
-    "43C021D2F0E746BBB29CA4E06229F111196D4871" : "CI346-Fire-Dragon\/Packages\/Socket-0.12.30\/",
+    "43C021D2F0E746BBB29CA4E06229F111196D4871" : "CI346-Fire-Dragon\/Packages\/Socket-0.12.33\/",
     "6D09577DC770D433CEBE622BD4B45C8CF6CB8CCC" : "CI346-Fire-Dragon\/Packages\/Polymorphic-1.0.1\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CI346-Fire-Dragon",
@@ -81,6 +83,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IBM-Swift\/HeliumLogger.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "92AF87893551AD3F2DEE78BEF3E924B9C5659E09"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vapor\/node.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EE0211841CDBC942EFB5905580DF4AA57B5992F6"
     }
   ]
 }

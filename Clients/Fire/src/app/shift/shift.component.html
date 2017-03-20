@@ -1,3 +1,21 @@
-<p>
-  shift works!
-</p>
+<div *ngIf="!isLoading">
+    <h2 class="clearfix">
+        Manage Employee Shifts
+        <span class="float-right">
+            <button md-mini-fab (click)="launchDialog()"><md-icon>add_circle</md-icon></button>
+        </span>
+    </h2>
+
+    <md-list>
+        <h3 md-subheader>Active shifts</h3>
+        <md-list-item *ngFor="let shift of shifts">
+            <md-icon md-list-avatar>perm_identity</md-icon>
+            <h4 md-line>{{shift.name}}</h4>
+            <p md-line>ID {{shift.id}}</p>
+        </md-list-item>
+    </md-list>
+</div>
+
+<div *ngIf="isLoading" class="row justify-content-center">
+    <md-spinner></md-spinner>
+</div>

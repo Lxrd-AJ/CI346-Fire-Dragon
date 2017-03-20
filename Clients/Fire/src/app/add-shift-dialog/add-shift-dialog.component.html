@@ -1,0 +1,48 @@
+<h1 md-dialog-title>Shift Editor</h1>
+<md-dialog-content>
+    <form (ngSubmit)="onSubmit()" #shiftForm="ngForm">
+        <md-input-container class="">
+            <input mdInput placeholder="Shift Name" [(ngModel)]="model.name" name="name" #name="ngModel" required>
+        </md-input-container>
+
+        <md-input-container class="">
+            <input mdInput placeholder="Start Date" [(ngModel)]="model.startDateTime" name="Start Date" #startDate="ngModel" type="date"/>
+        </md-input-container>
+
+        <md-input-container class="">
+            <input mdInput placeholder="End Date" [(ngModel)]="model.endDateTime" name="End Date" #endDate="ngModel" type="date" required />
+        </md-input-container>
+
+        <div class="form-group">
+            <md-select placeholder="Employees" #emp="ngModel" name="Employees" [(ngModel)]="tempEmployees" [disabled]="allEmployees.length <= 0">
+                <md-option mdInput *ngFor="let employee of allEmployees" [value]="employee">
+                    {{employee.name}}, {{employee.age}} years old
+                </md-option>
+            </md-select>
+            <ul>
+                <li *ngFor="let employee of tempEmployees">
+                    {{employee.name}}
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="error-messages">
+            <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+                Your shift name cannot be empty
+            </div>
+            <div [hidden]="startDate.valid || startDate.untouched" class="alert alert-danger">
+                The Shift needs to have a start date
+            </div>
+            <div [hidden]="endDate.valid || endDate.untouched" class="alert alert-danger">
+                The Shift needs to have an end date
+            </div>
+        </div>
+
+        <div>
+            <button md-raised-button color="primary" md-dialog-close type="submit" [disabled]="!shiftForm.form.valid">Ok</button>
+            <button md-raised-button color="warn" md-dialog-close (click)="dialogRef.close()">Close</button>
+        </div>
+
+    </form>
+</md-dialog-content>
