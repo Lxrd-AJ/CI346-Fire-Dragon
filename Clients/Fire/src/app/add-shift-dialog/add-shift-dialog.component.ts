@@ -23,7 +23,6 @@ export class AddShiftDialogComponent implements OnInit {
             this._tempEmployees.unshift(value as Employee)
             this.allEmployees = this.allEmployees.filter((emp) => emp.id != (value as Employee).id)
         }
-
     }
     get tempEmployees(){ return this._tempEmployees; }
     submitted: boolean = false

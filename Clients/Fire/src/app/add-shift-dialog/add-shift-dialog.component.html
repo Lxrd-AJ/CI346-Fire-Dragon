@@ -40,7 +40,7 @@
         </div>
 
         <div>
-            <button md-raised-button color="primary" md-dialog-close type="submit" [disabled]="!shiftForm.form.valid">Ok</button>
+            <button md-raised-button color="primary" md-dialog-close type="submit" [disabled]="!shiftForm.form.valid" (click)="onSubmit()">Ok</button>
             <button md-raised-button color="warn" md-dialog-close (click)="dialogRef.close()">Close</button>
         </div>
 

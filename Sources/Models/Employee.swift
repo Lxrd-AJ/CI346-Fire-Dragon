@@ -55,21 +55,21 @@ public class Employee: Entity {
 //TODO: Follow this tutorial instead http://codelle.com/blog/2016/5/an-easy-way-to-convert-swift-structs-to-json/
 
 extension Employee {
-    public func toJSON() -> JSON {
-        let mirror = Mirror(reflecting: self)
-        var json = JSON([:])
-        for (_,attribute) in mirror.children.enumerated() {
-            var _json: JSON;
-            if attribute.label as String! == "id" {
-                let value = (attribute.value as! Node).string! as String
-                _json = [ (attribute.label as String!) : value  ]
-            }else{
-                _json = [ (attribute.label as String!) : attribute.value  ]
-            }
-            json.merge(other: _json)
-        }
-        return json;
-    }
+    // public func toJSON() -> JSON {
+    //     let mirror = Mirror(reflecting: self)
+    //     var json = JSON([:])
+    //     for (_,attribute) in mirror.children.enumerated() {
+    //         var _json: JSON;
+    //         if attribute.label as String! == "id" {
+    //             let value = (attribute.value as! Node).string! as String
+    //             _json = [ (attribute.label as String!) : value  ]
+    //         }else{
+    //             _json = [ (attribute.label as String!) : attribute.value  ]
+    //         }
+    //         json.merge(other: _json)
+    //     }
+    //     return json;
+    // }
 
     public static func from(JSON json: JSON) -> Employee {
         return Employee(
@@ -79,3 +79,8 @@ extension Employee {
     }
 }
 
+extension Employee {
+    func shifts() throws -> Siblings<Shift>{
+        return try siblings()
+    }
+}

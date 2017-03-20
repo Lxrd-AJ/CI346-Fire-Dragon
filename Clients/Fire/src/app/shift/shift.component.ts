@@ -43,21 +43,19 @@ export class ShiftComponent implements OnInit {
             const shift: Shift = dialogRef.componentInstance.model;
             console.info("Newly created Shift object")
             console.info(shift);
-            // if( this.isEmployeeValid(employee) ){
-            //     this.employeeService.postEmployee(employee).then((response) => {
-            //         if( response.status == 200 ){
-            //             console.info("Successfully sent employee data to the server")
-            //             const json = response.json()
-            //             employee.id = json.id;
-            //             console.info(`Recieved from Server -> ${JSON.stringify(employee)}`)
-            //             this.snackBar.open(`Successfully saved ${employee.name}`,"Close",{duration: 3000});
-            //         }else{
-            //             console.error(response)
-            //             this.snackBar.open(response.statusText,"Close",{duration: 2000});
-            //         }
-            //         this.employees.unshift(employee);
-            //     });
-            // }
+            this.shiftService.saveShift(shift).then((response) => {
+                if( response.status == 200 ){
+                    console.info("Successfully sent employee data to the server")
+                    const json = response.json()
+                    shift.id = json.id;
+                    console.info(`Recieved from Server -> ${JSON.stringify(shift)}`)
+                    this.snackBar.open(`Successfully saved ${shift.name}`,"Close",{duration: 3000});
+                }else{
+                    console.error(response)
+                    this.snackBar.open(response.statusText,"Close",{duration: 2000});
+                }
+                this.shifts.unshift(shift); //No pun intended :)
+            });
         })
     }
 

@@ -92,3 +92,10 @@ extension Shift {
         )
     }
 }
+
+//Extension for many to many relationship with employees
+extension Shift {
+    func employees() throws -> Siblings<Employee>{
+        return try siblings()
+    }
+}

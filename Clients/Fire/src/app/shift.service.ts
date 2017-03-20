@@ -6,6 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ShiftService {
+    private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) { }
 
@@ -14,6 +15,12 @@ export class ShiftService {
                 .then(response => response.json() as Shift[])
                 .catch(this.handleError);
   }
+
+    saveShift(shift: Shift){
+        return this.http.post('shift', JSON.stringify({ shift: shift }), {headers: this.headers})
+                    .toPromise()
+                    .then(res => res)
+    }
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

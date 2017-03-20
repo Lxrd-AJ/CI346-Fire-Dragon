@@ -9,9 +9,10 @@
     <md-list>
         <h3 md-subheader>Active shifts</h3>
         <md-list-item *ngFor="let shift of shifts">
-            <md-icon md-list-avatar>perm_identity</md-icon>
+            <md-icon md-list-avatar>assignment</md-icon>
             <h4 md-line>{{shift.name}}</h4>
-            <p md-line>ID {{shift.id}}</p>
+            <p md-line *ngIf="shift.id">Shift ID {{shift.id}}</p>
+            <p md-line>{{shift.employees.length}} employees</p>
         </md-list-item>
     </md-list>
 </div>

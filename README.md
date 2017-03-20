@@ -19,13 +19,15 @@ To build for release
 - [ ] Keycloak setup (Local and remote using docker)
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
-- [ ] APIman setup
 - [x] Database basic setup and MongoKitten/Redbird setup
 - [ ] Employee Model CR-UD
-- [ ] Employee Shift CRUD
+- [ ] Employee Shift CR-UD
 - [ ] Employee - Shift REST API mapping
-- [ ] Documentation using Jazzy https://github.com/realm/jazzy
+- [ ] API Testing https://www.getpostman.com/docs/writing_tests && http://blog.getpostman.com/2015/09/03/how-to-write-powerful-automated-api-tests-with-postman-newman-and-jenkins/
+
 
 # Extensions
 - [ ] Telemetry
-- [ ] Scaling using Kubernettes 
+- [ ] Scaling using Kubernettes
+- [ ] API Rate Limiting https://github.com/teechap/kitura-limiter
+- [ ] Documentation using Jazzy https://github.com/realm/jazzy
