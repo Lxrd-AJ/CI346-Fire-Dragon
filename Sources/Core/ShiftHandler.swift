@@ -43,8 +43,11 @@ public class ShiftHandler {
                         var shift = Shift.from(JSON: shiftJSON)
                         try shift.save()
 
-                        let employeeJSONs = shiftJSON["employees"].arrayValue
-                        //TODO: Continue here
+                        if let employeeJSONs = shiftJSON["employees"].arrayValue {
+                            print(employeeJSONs)
+                            
+                            //TODO: Continue here
+                        }
                         Log.info("Created new Shift object \(shift.id)")
                         response.status(.OK).send(json: shift.toJSON() )
                     }catch {
