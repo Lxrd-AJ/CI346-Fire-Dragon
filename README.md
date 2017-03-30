@@ -13,9 +13,10 @@ To build for release
 - [x] Setup deployment scripts
 - [x] Setup Jenkins deployment
 - [x] AngularJS FrontEnd basic setup
-- [ ] Switch to ExpressJS/Nodejs for server-side
-- [ ] Employee Model CRUD
-- [ ] Employee Shift CRUD
+- [x] Switch to ExpressJS/Nodejs for server-side
+    - [x] Serve the web client
+- [x] Employee Model CR-UD and Controller
+- [ ] Employee Shift CRUD and Controller
 - [ ] Employee - Shift REST API mapping
 - [ ] Docker Compose setup
 - [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/

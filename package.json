@@ -1,0 +1,25 @@
+{
+  "name": "ci346-fire-dragon",
+  "version": "1.0.0",
+  "description": "CI346 Semester 2 Assignmnent",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lxrd-AJ/CI346-Fire-Dragon.git"
+  },
+  "author": "Mr_Robot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lxrd-AJ/CI346-Fire-Dragon/issues"
+  },
+  "homepage": "https://github.com/Lxrd-AJ/CI346-Fire-Dragon#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.2",
+    "morgan": "^1.8.1"
+  }
+}
