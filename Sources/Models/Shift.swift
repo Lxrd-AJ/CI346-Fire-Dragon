@@ -15,7 +15,7 @@ public class Shift: Entity {
     public var endDate: Date
     let dateFormatter: DateFormatter = {
         let df = DateFormatter();
-        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        df.dateFormat = "yyyy-MM-dd"
         return df
     }()
     enum Error: Swift.Error {

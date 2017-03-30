@@ -5,6 +5,7 @@
 import Foundation
 import Fluent
 import SwiftyJSON
+import LoggerAPI
 
 public extension Entity {
     public func toJSON() -> JSON {
@@ -51,6 +52,7 @@ public extension JSON {
     public var date: Date? {
         get {
             if let str = self.string {
+                Log.info("JSON string -> \(str)")
                 return JSON.jsonDateFormatter.date(from: str)
             }
             return nil
@@ -59,8 +61,8 @@ public extension JSON {
 
     private static let jsonDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        dateFormatter.timeZone = TimeZone.autoupdatingCurrent
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        //dateFormatter.timeZone = TimeZone.autoupdatingCurrent
         return dateFormatter
     }()
 

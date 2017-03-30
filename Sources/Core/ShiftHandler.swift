@@ -13,6 +13,7 @@ public class ShiftHandler {
         do{
             let shifts: [Shift] = try Shift.query().all()
             Log.info("Sending \(shifts.count) shift data")
+            for shift in shifts{ print(shift.toJSON()) }
             response.status(.OK).send(json: JSON(shifts.map({ $0.toJSON() })) )
         }catch{
             print(error)
@@ -35,19 +36,21 @@ public class ShiftHandler {
                 print(shiftJSON.object)
                 print(type(of: shiftJSON))
 
-                if( shiftJSON["id"].exists() && !shiftJSON["id"].string!.isEmpty){
-                    print("Exsting object")
+                if let id = shiftJSON["id"].string { 
+                    Log.info("-> Exsting Shift object \(id)")
                     //TODO:updateShift(shiftJSON)
                 }else{
+                    Log.info("-> New Shift object recieved")
                     do{
                         var shift = Shift.from(JSON: shiftJSON)
                         try shift.save()
 
-                        if let employeeJSONs = shiftJSON["employees"].arrayValue {
-                            print(employeeJSONs)
-                            
-                            //TODO: Continue here
+                        guard let employeeJSONs = shiftJSON["employees"].arrayValue as [JSON]? else{
+                            response.status(.badRequest).send("Bad request")
+                            return;
                         }
+                        print(employeeJSONs)
+                        //TODO: Continue here
                         Log.info("Created new Shift object \(shift.id)")
                         response.status(.OK).send(json: shift.toJSON() )
                     }catch {

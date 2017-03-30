@@ -4,6 +4,7 @@ import { ShiftService } from './../shift.service';
 import { Shift } from './../models/shift';
 import { MdSnackBar } from '@angular/material';
 import { AddShiftDialogComponent } from '../add-shift-dialog/add-shift-dialog.component';
+import * as moment from 'moment';
 
 @Component({
   selector: 'shift',
@@ -24,6 +25,7 @@ export class ShiftComponent implements OnInit {
         this.isLoading = true;
         this.shiftService.getShifts().then((shifts) => {
             console.log(shifts);
+            this.shifts = shifts;
             this.isLoading = false;
         })
     }

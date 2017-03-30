@@ -12,7 +12,7 @@
             <md-icon md-list-avatar>assignment</md-icon>
             <h4 md-line>{{shift.name}}</h4>
             <p md-line *ngIf="shift.id">Shift ID {{shift.id}}</p>
-            <p md-line>{{shift.employees.length}} employees</p>
+            <p md-line>{{shift.employees?.length}} employees</p>
         </md-list-item>
     </md-list>
 </div>

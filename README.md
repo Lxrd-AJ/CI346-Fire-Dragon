@@ -12,17 +12,17 @@ To build for release
 - [x] Implement tests
 - [x] Setup deployment scripts
 - [x] Setup Jenkins deployment
+- [x] AngularJS FrontEnd basic setup
+- [ ] Switch to ExpressJS/Nodejs for server-side
+- [ ] Employee Model CRUD
+- [ ] Employee Shift CRUD
+- [ ] Employee - Shift REST API mapping
 - [ ] Docker Compose setup
 - [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
 - [ ] Setup SSL to server
-- [x] AngularJS FrontEnd basic setup
 - [ ] Keycloak setup (Local and remote using docker)
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
-- [x] Database basic setup and MongoKitten/Redbird setup
-- [ ] Employee Model CR-UD
-- [ ] Employee Shift CR-UD
-- [ ] Employee - Shift REST API mapping
 - [ ] API Testing https://www.getpostman.com/docs/writing_tests && http://blog.getpostman.com/2015/09/03/how-to-write-powerful-automated-api-tests-with-postman-newman-and-jenkins/
 
 

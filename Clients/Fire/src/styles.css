@@ -4,10 +4,9 @@ h1, h2, h3, h4, h5 , h6 {
 }
 
 body {
-    text-align: center;
+    text-align: left;
     font-weight: 300;
     background-color: white;
-    text-align: left;
     margin-top: 10px;
 }
 
