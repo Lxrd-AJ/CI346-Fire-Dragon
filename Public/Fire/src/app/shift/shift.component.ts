@@ -24,7 +24,7 @@ export class ShiftComponent implements OnInit {
     ngOnInit() {
         this.isLoading = true;
         this.shiftService.getShifts().then((shifts) => {
-            console.log(shifts);
+            //console.log(shifts);
             this.shifts = shifts;
             this.isLoading = false;
         })
@@ -38,18 +38,18 @@ export class ShiftComponent implements OnInit {
             //position: {top: '-50', bottom: '50', left: '-50', right: '50' },
             data: new Shift(null,null,new Date(),null)
         });
-        dialogRef.afterClosed().subscribe(emp=> {
-            console.info("`afterClosed` message from shift dialog ---")
+        dialogRef.afterClosed().subscribe( (emp) => {
+            //console.info("`afterClosed` message from shift dialog ---")
+            //console.info(emp)
             //NB: emp is always undefined, most likely due to a bug in angular that doen't return the passed data
-            //so we shall take the object directly from the dialog
+            //so we shall take the object directly from the dialog and clone it
             const shift: Shift = dialogRef.componentInstance.model;
-            console.info("Newly created Shift object")
-            console.info(shift);
+            //TODO: Check if Shift is valid before sending to server
             this.shiftService.saveShift(shift).then((response) => {
                 if( response.status == 200 ){
                     console.info("Successfully sent employee data to the server")
                     const json = response.json()
-                    shift.id = json.id;
+                    shift._id = json._id;
                     console.info(`Recieved from Server -> ${JSON.stringify(shift)}`)
                     this.snackBar.open(`Successfully saved ${shift.name}`,"Close",{duration: 3000});
                 }else{

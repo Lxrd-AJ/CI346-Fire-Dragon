@@ -21,8 +21,9 @@ export class AddShiftDialogComponent implements OnInit {
             value.forEach((user) => this._tempEmployees.unshift(user))
         }else{
             this._tempEmployees.unshift(value as Employee)
-            this.allEmployees = this.allEmployees.filter((emp) => emp.id != (value as Employee).id)
+            this.allEmployees = this.allEmployees.filter((emp) => emp._id != (value as Employee)._id)
         }
+        this.model.employees = this._tempEmployees;
     }
     get tempEmployees(){ return this._tempEmployees; }
     submitted: boolean = false
@@ -38,9 +39,9 @@ export class AddShiftDialogComponent implements OnInit {
     }
 
     onSubmit(){
-        this.submitted = true;
         this.model.employees = this.tempEmployees;
         this.dialogRef.close(this.model)
+        this.submitted = true;
     }
 
 }

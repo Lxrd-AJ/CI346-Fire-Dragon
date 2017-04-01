@@ -16,7 +16,7 @@ To build for release
 - [x] Switch to ExpressJS/Nodejs for server-side
     - [x] Serve the web client
 - [x] Employee Model CR-UD and Controller
-- [ ] Employee Shift CRUD and Controller
+- [x] Employee Shift CRUD and Controller
 - [ ] Employee - Shift REST API mapping
 - [ ] Docker Compose setup
 - [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
@@ -28,6 +28,8 @@ To build for release
 
 
 # Extensions
+- [ ] Employee Model CR-UD and Controller
+- [ ] Employee Shift CR-UD and Controller
 - [ ] Telemetry
 - [ ] Scaling using Kubernettes
 - [ ] API Rate Limiting https://github.com/teechap/kitura-limiter

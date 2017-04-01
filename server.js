@@ -1,7 +1,8 @@
 const Express = require('express');
 const Path = require("path");
 const Mongoose = require('mongoose');
-const EmployeeContr = require("./Controllers/Employee.js");
+const EmployeeCtrl = require("./Controllers/Employee.js");
+const ShiftCtrl = require("./Controllers/Shift.js");
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 
@@ -32,8 +33,15 @@ App.get('/', (req,res) => {
 /**
  * Employee REST Handlers
  */
-App.get('/employee', EmployeeContr.getEmployees);
-App.post('/employee', EmployeeContr.createEmployee);
+App.get('/employee', EmployeeCtrl.getEmployees);
+App.post('/employee', EmployeeCtrl.createEmployee);
+
+/**
+ * Shift REST Handlers
+ */
+App.get('/shift', ShiftCtrl.getShifts);
+App.post('/shift', ShiftCtrl.createShift);
+
 
 App.listen(8090, function(){
     console.info("Server started on port 8090");

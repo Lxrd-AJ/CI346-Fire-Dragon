@@ -18,8 +18,8 @@ export class ShiftService {
   }
 
     saveShift(shift: Shift){
-      shift.startDateTime = moment(shift.startDateTime).format("YYYY-MM-DD") as any 
-      shift.endDateTime = moment(shift.endDateTime).format("YYYY-MM-DD") as any
+      //shift.startDateTime = moment(shift.startDateTime).format("YYYY-MM-DD") as any 
+      //shift.endDateTime = moment(shift.endDateTime).format("YYYY-MM-DD") as any
         return this.http.post('shift', JSON.stringify({ shift: shift }), {headers: this.headers})
                     .toPromise()
                     .then(res => res)
