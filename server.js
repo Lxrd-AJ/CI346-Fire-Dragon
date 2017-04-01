@@ -34,6 +34,8 @@ App.get('/', (req,res) => {
  * Employee REST Handlers
  */
 App.get('/employee', EmployeeCtrl.getEmployees);
+App.get('/employee/:id', EmployeeCtrl.getEmployee);
+App.get('/employee/:id/shift', EmployeeCtrl.getEmployee);
 App.post('/employee', EmployeeCtrl.createEmployee);
 
 /**

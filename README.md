@@ -17,7 +17,7 @@ To build for release
     - [x] Serve the web client
 - [x] Employee Model CR-UD and Controller
 - [x] Employee Shift CRUD and Controller
-- [ ] Employee - Shift REST API mapping
+- [x] Employee - Shift REST API mapping
 - [ ] Docker Compose setup
 - [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
 - [ ] Setup SSL to server
@@ -30,7 +30,9 @@ To build for release
 # Extensions
 - [ ] Employee Model CR-UD and Controller
 - [ ] Employee Shift CR-UD and Controller
+- [ ] API Rate Limiting https://github.com/teechap/kitura-limiter
+- [ ] Employee Detail Dialog to show more information
 - [ ] Telemetry
 - [ ] Scaling using Kubernettes
-- [ ] API Rate Limiting https://github.com/teechap/kitura-limiter
+
 - [ ] Documentation using Jazzy https://github.com/realm/jazzy

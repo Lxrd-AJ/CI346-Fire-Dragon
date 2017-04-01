@@ -7,8 +7,9 @@ const EmployeeSchema = Mongoose.Schema({
     email: String
 })
 
-EmployeeSchema.virtual('shifts').get(() => {
-    Shift.find()
-})
+EmployeeSchema.methods.shifts = function(){
+    return Shift.find({ employees: this._id }) //{$in: [this._id]}
+                .then((shifts) => shifts,(err) => console.error(err))
+}
 
 module.exports = EmployeeSchema
