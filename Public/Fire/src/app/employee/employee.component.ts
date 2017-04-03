@@ -42,7 +42,7 @@ export class EmployeeComponent implements OnInit {
                     if( response.status == 200 ){
                         console.info("Successfully sent employee data to the server")
                         const json = response.json()
-                        employee.id = json.id;
+                        employee._id = json.id;
                         console.info(`Recieved from Server -> ${JSON.stringify(employee)}`)
                         this.snackBar.open(`Successfully saved ${employee.name}`,"Close",{duration: 3000});
                     }else{

@@ -1,0 +1,10 @@
+{
+  "realm": "CI346-Fire-Project",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "fire",
+  "enable-cors" : true, 
+  "credentials": {
+    "secret": "e50fabc4-83c9-447d-a8df-b7c3222d9404"
+  }
+}

@@ -13,7 +13,15 @@ export class EmployeeService {
 
   getEmployees(){
     return this.http.get('employee').toPromise()
-                .then(response => response.json() as Employee[])
+                .then(response => {
+                  //TODO:Check if redirect url is for auth and manually make redirect
+                  console.log(response);
+                  console.log(response.url);
+                  if( response.status == 302){
+                    console.info("302 recieved")
+                  }
+                  return response.json() as Employee[]
+                })
                 .catch(this.handleError)
   }
 
@@ -32,7 +40,8 @@ export class EmployeeService {
   putEmployee(){}
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
+    console.error('An error occurred'); // for demo purposes only
+    console.error(error);
     return Promise.reject(error.message || error);
   }
 }
