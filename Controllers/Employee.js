@@ -26,18 +26,5 @@ exports.getEmployee = (req,res) => {
             _emp.shifts = shifts;
             res.json(_emp);
         });
-
-        // emp_promises = emps.map((e) => {
-        //     _e = e.toObject();
-        //     return e.shifts().then((shifts) => {
-        //         _e.shifts = shifts;
-        //         return _e;
-        //     })
-        // })
-        // Q.allSettled(emp_promises).then((value_states) => {
-        //     value_states = value_states.filter((v) => v.state == "fulfilled")
-        //     results = value_states.map((x) => x.value)
-        //     res.json(results);
-        // })
     });
 }
