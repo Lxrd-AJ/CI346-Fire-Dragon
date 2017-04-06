@@ -33,6 +33,8 @@ To build for release
 - [ ] Employee Shift CR-UD and Controller
 - [ ] API Rate Limiting https://github.com/teechap/kitura-limiter
 - [ ] Employee Detail Dialog to show more information
-- [ ] Telemetry
+- [ ] Authentication using 3rd party OAuth (Facebook, Twitter, Google)
+- [ ] Telemetry (https://goaccess.io/)
 - [ ] Scaling using Kubernettes
 - [ ] Documentation using Jazzy https://github.com/realm/jazzy
+- [ ] Sending out Emails to new users

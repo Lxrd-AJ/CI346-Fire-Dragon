@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { AuthService } from './../auth-service.service';
+import { Router } from '@angular/router';
+import { MdSnackBar } from '@angular/material';
 
 @Component({
   selector: 'login',
@@ -10,20 +12,29 @@ export class LoginComponent implements OnInit {
 
     username: String;
     password: String; 
-    private headers = new Headers({'Content-Type': 'application/json'});
+    shouldCreateAccount: boolean = false
 
-  constructor(private http:Http) { }
+  constructor(private authService:AuthService, private router: Router, public snackBar: MdSnackBar) {
+   }
 
   ngOnInit() {
   }
 
     onSubmit(){
-        this.http.post('/login', JSON.stringify({
-            username: this.username,
-            password: this.password
-        }), {headers: this.headers}).toPromise().then(response => {
-            console.log(response);
-        },(err) => console.error(err));
+        if(!this.shouldCreateAccount){
+            this.authService.login(this.username,this.password).then((res) => {
+                console.log(res)
+                if(res.success){
+                    this.router.navigate(['/']);
+                }else{
+                    this.snackBar.open(res.message);
+                }
+            });
+        }
+    }
+
+    toggleCreateAccount(param){
+        console.log(param)
     }
 
 }

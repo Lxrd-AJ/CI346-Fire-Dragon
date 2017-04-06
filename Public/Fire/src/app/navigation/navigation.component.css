@@ -1,3 +1,11 @@
 .lf-nav {
     border-bottom: 1px solid rgb(240, 240, 240);
 }
+
+.user {
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 3px;
+    background-color: #1abc9c;
+}

@@ -76,7 +76,6 @@ Passport.deserializeUser((id,done) => {
 //NB: Angular2 does not allow redirects as the client-side is more independent of the server,
 //      therefore, send the redirect data instead of doing a redirect from the server
 App.post('/login', (req,res,next) => {
-    let relay = "/#/employee";
     let signup = true;
     Passport.authenticate('local',(err,user,info) => {
         if(err){
@@ -87,18 +86,20 @@ App.post('/login', (req,res,next) => {
         if(!user){
             if(info.message === "INVALID_PASSWORD"){
                 console.info("Wrong password")
-                signup = false; relay = "/#/login"
+                signup = false; 
+                message = "Invalid Login details"
             }else{
                 console.info("No user found matching logon");
-                relay = "/#/signup"; signup = true;
+                signup = true;
+                message = "User not found"
             }
-            res.json({ signup:signup, relay:relay })
+            res.json({ signup:signup, message:message })
         }else if(!err){
             console.info("-> /login : " + user.username);
             req.logIn(user,(err) => {
                 if(err){ return next(err); }
-                console.info("Redirecting user to " + relay)
-                return res.redirect(`${relay}`)
+                console.info(`Successfully logged ${user.username} in`)
+                return res.json({ signup: false, user: user })
             })
         }
     })(req,res,next);

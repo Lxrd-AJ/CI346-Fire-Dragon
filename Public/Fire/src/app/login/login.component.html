@@ -1,14 +1,26 @@
-<div>
-    <form action="/login" method="post" #loginForm="ngForm" (ngSubmit)="onSubmit()">
-        <md-input-container>
-            <input mdInput placeholder="UserName" name="username" [(ngModel)]="username" #uname="ngModel" required/>
-        </md-input-container>
-        <md-input-container>
-            <input mdInput placeholder="Password" type="password" name="password" [(ngModel)]="password" #pword="ngModel" required/>
-        </md-input-container>
+<md-card class="form-div">
+    <md-card-content>
+        <section>
+            <form action="/login" method="post" #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                <md-input-container>
+                    <input mdInput placeholder="UserName" name="username" [(ngModel)]="username" #uname="ngModel" required/>
+                </md-input-container>
+                <md-input-container>
+                    <input mdInput placeholder="Password" type="password" name="password" [(ngModel)]="password" #pword="ngModel" required/>
+                </md-input-container>
+                
+                <md-checkbox class="" [(ngModel)]="shouldCreateAccount" name="account_toggle">
+                    Create Account
+                </md-checkbox>
 
-        <div>
-            <button md-raised-button type="submit" [disabled]="!loginForm.form.valid">Submit</button>
-        </div>
-    </form>
-</div>
+                <md-slide-toggle class="text-center toggle" [(ngModel)]="shouldCreateAccount" name="temp">
+                    Create Account 2
+                </md-slide-toggle>
+
+                <div class="clearfix">
+                    <button md-raised-button type="submit" [disabled]="!loginForm.form.valid">Submit</button>
+                </div>
+            </form>
+        </section>
+    </md-card-content>
+</md-card>

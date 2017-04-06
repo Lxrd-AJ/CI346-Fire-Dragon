@@ -1,0 +1,12 @@
+.form-div {
+ 
+    margin-top: 50px;
+    text-align: center;
+}
+
+.toggle {
+    text-align: center !important;
+       margin-left: auto;
+    margin-right: auto;
+    float: right;
+}

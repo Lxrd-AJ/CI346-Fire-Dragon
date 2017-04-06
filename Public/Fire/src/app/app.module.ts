@@ -15,6 +15,7 @@ import { AddEmployeeDialogComponent } from './add-employee-dialog/add-employee-d
 import { ShiftComponent } from './shift/shift.component';
 import { AddShiftDialogComponent } from './add-shift-dialog/add-shift-dialog.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth-service.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AuthService],
   entryComponents: [AddEmployeeDialogComponent, AddShiftDialogComponent],
   bootstrap: [AppComponent]
 })

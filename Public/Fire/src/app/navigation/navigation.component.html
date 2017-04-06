@@ -13,5 +13,10 @@
     <li class="nav-item"><a routerLink="/" class="nav-link">Home</a></li>
     <li class="nav-item"><a routerLink="/employees" class="nav-link">Employees</a></li>
     <li class="nav-item"><a routerLink="/shift" class="nav-link">Shifts</a></li>
-    <li class="nav-item"><a routerLink="/login" class="nav-link">Login</a></li>
+    <span *ngIf="!currentUser">
+        <li class="nav-item"><a routerLink="/login" class="nav-link">Login</a></li>
+    </span>
+    <span *ngIf="currentUser">
+        <li class="nav-item user">{{currentUser.username}}</li>
+    </span>
 </ul>
