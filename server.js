@@ -99,7 +99,7 @@ App.post('/login', (req,res,next) => {
             req.logIn(user,(err) => {
                 if(err){ return next(err); }
                 console.info(`Successfully logged ${user.username} in`)
-                return res.json({ signup: false, user: user })
+                return res.json({ signup: false, user: user, message:"Successfully authenticated" })
             })
         }
     })(req,res,next);

@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
                 if(res.success){
                     this.router.navigate(['/']);
                 }else{
-                    this.snackBar.open(res.message);
+                    this.snackBar.open(res.message, "Close", {duration: 2000});
                 }
             });
         }
