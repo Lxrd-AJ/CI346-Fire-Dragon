@@ -29,7 +29,7 @@ Database.once("open", () => {
 //In-memory datastore
 App.use( session({
     secret: '3nt3rth3dr4g0n',
-    store: new MongoStore({ mongooseConnection: Mongoose.connection }), 
+    store: new MongoStore({ mongooseConnection: Mongoose.connection }),
     resave: false,
     saveUninitialized: true
 }));
@@ -45,16 +45,16 @@ App.use(logger('short'));
 
 /**
  * Authentication setup
- * 
- * - The Local Strategy uses a simple Username and Password data to match the user to authenticate 
+ *
+ * - The Local Strategy uses a simple Username and Password data to match the user to authenticate
  * - Irrespective of the strategy used, a session would be created for the current authenticated user
- *      via the MongoStore as setup above, so the currently authenticated user can be retrieved via 
+ *      via the MongoStore as setup above, so the currently authenticated user can be retrieved via
  *      `req.session.user`
  */
 //Initial setup
 App.use(Passport.initialize());
 App.use(Passport.session());
-//Passport local strategy 
+//Passport local strategy
 Passport.use(new LocalStrategy((username,password,done) => {
     console.info("-> LocalStrategy");
     console.info("Authenticating " + username + ":" + password);
@@ -67,7 +67,7 @@ Passport.use(new LocalStrategy((username,password,done) => {
         console.error(err);
     })
 }));
-//Serializing and Deserialising strategy via cookie passed by the client 
+//Serializing and Deserialising strategy via cookie passed by the client
 Passport.serializeUser((user,done) => done(null, user._id));
 Passport.deserializeUser((id,done) => {
     User.findById(id).then((user) => done(null,user),(err) => done(err,false));
@@ -75,6 +75,18 @@ Passport.deserializeUser((id,done) => {
 //Authentication Route
 //NB: Angular2 does not allow redirects as the client-side is more independent of the server,
 //      therefore, send the redirect data instead of doing a redirect from the server
+App.post("/signup", (req,res,next) => {
+    const userJSON = req.body['user'];
+    console.info(userJSON)
+    const user = new User({
+        username: userJSON['username'],
+        password: userJSON['password']
+    });
+    return user.save().then((result) => {
+        console.info(result);
+        return res.json(result);
+    }, (err) => res.status(400).send(err));
+});
 App.post('/login', (req,res,next) => {
     let signup = true;
     Passport.authenticate('local',(err,user,info) => {
@@ -86,7 +98,7 @@ App.post('/login', (req,res,next) => {
         if(!user){
             if(info.message === "INVALID_PASSWORD"){
                 console.info("Wrong password")
-                signup = false; 
+                signup = false;
                 message = "Invalid Login details"
             }else{
                 console.info("No user found matching logon");
@@ -104,7 +116,7 @@ App.post('/login', (req,res,next) => {
         }
     })(req,res,next);
 });
-//TODO: Create Signup route
+
 
 
 App.get('/', (req,res) => {

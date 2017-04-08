@@ -30,7 +30,8 @@ export class AddShiftDialogComponent implements OnInit {
     get diagnostic() { return JSON.stringify(this.model); }
 
     constructor(public dialogRef: MdDialogRef<AddShiftDialogComponent>, private employeeService:EmployeeService) {
-        this.model = dialogRef.config.data as Shift
+        //this.model = dialogRef.config.data as Shift
+        this.model = dialogRef.componentInstance.model;
         this.tempEmployees = this.model.employees;
     }
 

@@ -13,7 +13,8 @@ export class AddEmployeeDialogComponent implements OnInit {
     submitted = false;
 
     constructor(public dialogRef: MdDialogRef<AddEmployeeDialogComponent>) {
-        this.model = dialogRef.config.data as Employee
+        //this.model = dialogRef.config.data as Employee
+        this.model = dialogRef.componentInstance.model;
     }
 
     ngOnInit() {
@@ -28,4 +29,3 @@ export class AddEmployeeDialogComponent implements OnInit {
     get diagnostic() { return JSON.stringify(this.model); }
 
 }
-
