@@ -45,19 +45,22 @@ export class ShiftComponent implements OnInit {
             //so we shall take the object directly from the dialog and clone it
             const shift: Shift = dialogRef.componentInstance.model;
             //TODO: Check if Shift is valid before sending to server
-            this.shiftService.saveShift(shift).then((response) => {
-                if( response.status == 200 ){
-                    console.info("Successfully sent employee data to the server")
-                    const json = response.json()
-                    shift._id = json._id;
-                    console.info(`Recieved from Server -> ${JSON.stringify(shift)}`)
-                    this.snackBar.open(`Successfully saved ${shift.name}`,"Close",{duration: 3000});
-                }else{
-                    console.error(response)
-                    this.snackBar.open(response.statusText,"Close",{duration: 2000});
-                }
-                this.shifts.unshift(shift); //No pun intended :)
-            });
+            if(shift.name && shift.name !== ""){
+                this.shiftService.saveShift(shift).then((response) => {
+                    if( response.status == 200 ){
+                        console.info("Successfully sent employee data to the server")
+                        const json = response.json()
+                        shift._id = json._id;
+                        console.info(`Recieved from Server -> ${JSON.stringify(shift)}`)
+                        this.snackBar.open(`Successfully saved ${shift.name}`,"Close",{duration: 3000});
+                    }else{
+                        console.error(response)
+                        this.snackBar.open(response.statusText,"Close",{duration: 2000});
+                    }
+                    this.shifts.unshift(shift); //No pun intended :)
+                });
+            }
+            
         })
     }
 

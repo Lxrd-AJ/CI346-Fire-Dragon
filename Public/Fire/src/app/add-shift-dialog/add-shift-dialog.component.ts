@@ -31,7 +31,7 @@ export class AddShiftDialogComponent implements OnInit {
 
     constructor(public dialogRef: MdDialogRef<AddShiftDialogComponent>, private employeeService:EmployeeService) {
         //this.model = dialogRef.config.data as Shift
-        this.model = dialogRef.componentInstance.model;
+        this.model = dialogRef._containerInstance.dialogConfig.data;
         this.tempEmployees = this.model.employees;
     }
 

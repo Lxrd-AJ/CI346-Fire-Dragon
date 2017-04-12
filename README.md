@@ -20,11 +20,9 @@ To build for release
 - [x] Employee - Shift REST API mapping
 - [x] Passportjs auth & Angular client ouath/ Keycloak setup (Local and remote using docker)
 - [ ] HTTPS/SSL Setup keycloak
-- [ ] Keycloak Auth basic setup
-- [ ] Docker Compose setup
+~~- [ ] Keycloak Auth basic setup~~
 - [ ] Jenkins setup
 - [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
-- [ ] Setup SSL to server
 - [ ] API Testing https://www.getpostman.com/docs/writing_tests && http://blog.getpostman.com/2015/09/03/how-to-write-powerful-automated-api-tests-with-postman-newman-and-jenkins/
 
 
@@ -35,6 +33,8 @@ To build for release
 - [ ] Employee Detail Dialog to show more information
 - [ ] Authentication using 3rd party OAuth (Facebook, Twitter, Google)
 - [ ] Telemetry (https://goaccess.io/)
+- [ ] Docker Compose setup
 - [ ] Scaling using Kubernettes
 - [ ] Documentation using Jazzy https://github.com/realm/jazzy
 - [ ] Sending out Emails to new users
+- [ ] End to End Testing using http://nightwatchjs.org/ 

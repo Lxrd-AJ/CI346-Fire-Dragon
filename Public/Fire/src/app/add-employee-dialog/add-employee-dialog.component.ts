@@ -13,8 +13,8 @@ export class AddEmployeeDialogComponent implements OnInit {
     submitted = false;
 
     constructor(public dialogRef: MdDialogRef<AddEmployeeDialogComponent>) {
-        //this.model = dialogRef.config.data as Employee
-        this.model = dialogRef.componentInstance.model;
+        console.log(dialogRef._containerInstance.dialogConfig.data);
+        this.model = dialogRef._containerInstance.dialogConfig.data;
     }
 
     ngOnInit() {
