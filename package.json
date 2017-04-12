@@ -4,8 +4,10 @@
   "description": "CI346 Semester 2 Assignmnent",
   "main": "server.js",
   "scripts": {
+    "npm": "npm",
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test-e2e",
+    "test-e2e": "nightwatch"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,8 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "q": "^1.5.0"
+  },
+  "devDependencies": {
+    "nightwatch": "^0.9.14"
   }
 }
