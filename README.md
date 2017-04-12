@@ -18,7 +18,7 @@ To build for release
 - [x] Employee Model CR-UD and Controller
 - [x] Employee Shift CRUD and Controller
 - [x] Employee - Shift REST API mapping
-- [ ] Passportjs auth & Angular client ouath/ Keycloak setup (Local and remote using docker)
+- [x] Passportjs auth & Angular client ouath/ Keycloak setup (Local and remote using docker)
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Keycloak Auth basic setup
 - [ ] Docker Compose setup

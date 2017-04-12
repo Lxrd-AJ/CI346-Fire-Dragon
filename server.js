@@ -76,15 +76,17 @@ Passport.deserializeUser((id,done) => {
 //NB: Angular2 does not allow redirects as the client-side is more independent of the server,
 //      therefore, send the redirect data instead of doing a redirect from the server
 App.post("/signup", (req,res,next) => {
-    const userJSON = req.body['user'];
-    console.info(userJSON)
     const user = new User({
-        username: userJSON['username'],
-        password: userJSON['password']
+        username: req.body['username'],
+        password: req.body['password']
     });
-    return user.save().then((result) => {
+    return user.save().then((_user) => {
         console.info(result);
-        return res.json(result);
+        req.logIn(_user,(err) => {
+            if(err){ next(err); }
+            console.info(`User ${user.username} Successfully created and logged in`);
+            return res.json({ user: _user, message:"Account created and authenticated" });
+        })
     }, (err) => res.status(400).send(err));
 });
 App.post('/login', (req,res,next) => {
@@ -116,8 +118,6 @@ App.post('/login', (req,res,next) => {
         }
     })(req,res,next);
 });
-
-
 
 App.get('/', (req,res) => {
     res.sendFile(`${publicDir}/Fire/dist/index.html`);

@@ -10,8 +10,9 @@ export class AuthService {
 
     constructor(private http: Http) { }
 
-    login(username: String, password: String ){
-        return this.http.post('/login', JSON.stringify({
+    login(username: String, password: String, signup?:boolean ){
+        let route = (signup ? "/signup" : "/login");
+        return this.http.post(route, JSON.stringify({
             username: username,
             password: password
         }), {headers: this.headers}).toPromise().then(response => {
