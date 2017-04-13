@@ -45,7 +45,7 @@ export class ShiftComponent implements OnInit {
             //so we shall take the object directly from the dialog and clone it
             const shift: Shift = dialogRef.componentInstance.model;
             //TODO: Check if Shift is valid before sending to server
-            if(shift.name && shift.name !== ""){
+            if(shift.name && shift.name !== "" && dialogRef.componentInstance.submitted){
                 this.shiftService.saveShift(shift).then((response) => {
                     if( response.status == 200 ){
                         console.info("Successfully sent employee data to the server")

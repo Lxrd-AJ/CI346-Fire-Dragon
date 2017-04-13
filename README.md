@@ -20,8 +20,7 @@ To build for release
 - [x] Employee - Shift REST API mapping
 - ~~[ ] Keycloak Auth basic setup~~
 - [x] Passportjs auth & Angular client ouath/ Keycloak setup (Local and remote using docker)
-- [ ] Automated test of the web app https://www.getpostman.com/docs/writing_tests && http://blog.getpostman.com/2015/09/03/how-to-write-powerful-automated-api-tests-with-postman-newman-and-jenkins/
-
+- [ ] Automated test of the web app 
 
 # Extensions
 - [ ] HTTPS/SSL Setup keycloak
