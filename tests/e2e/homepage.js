@@ -1,5 +1,5 @@
 module.exports = {
-    "Test Page Loading": (browser) => {
+    "Test Home-Page Load": (browser) => {
         browser.url("http://localhost:8090")
             .waitForElementVisible("body", 5000)
             .assert.title("Fire")
