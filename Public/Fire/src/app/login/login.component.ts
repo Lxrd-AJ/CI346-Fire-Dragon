@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
         this.authService.login(this.username,this.password, this.shouldCreateAccount).then((res) => {
             console.log(res)
             if(res.success){
+                this.snackBar.open(res.message, "Close", {duration: 2000});
                 this.router.navigate(['/']);
             }else{
                 this.snackBar.open(res.message, "Close", {duration: 2000});

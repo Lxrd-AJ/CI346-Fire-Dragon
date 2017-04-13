@@ -5,16 +5,16 @@
 
   <testsuite name="shift"
     errors="0" failures="0" hostname="" id="" package="shift" skipped="0"
-    tests="2" time="6.692" timestamp="Thu, 13 Apr 2017 13:19:53 GMT">
+    tests="2" time="6.667" timestamp="Thu, 13 Apr 2017 14:08:07 GMT">
   
-    <testcase name="Test Shift Page Loads" classname="shift" time="3.224" assertions="2">
+    <testcase name="Test Shift Page Loads" classname="shift" time="3.132" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Test functionality to create a new shift" classname="shift" time="3.468" assertions="4">
+    <testcase name="Test functionality to create a new shift" classname="shift" time="3.535" assertions="4">
 
     
 

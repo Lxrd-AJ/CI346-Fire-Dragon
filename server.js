@@ -75,19 +75,21 @@ Passport.deserializeUser((id,done) => {
 //Authentication Route
 //NB: Angular2 does not allow redirects as the client-side is more independent of the server,
 //      therefore, send the redirect data instead of doing a redirect from the server
+//TODO: Ensure the username is unique before creating a new user 
 App.post("/signup", (req,res,next) => {
     const user = new User({
         username: req.body['username'],
         password: req.body['password']
     });
+    console.info("-> /signup: Attempting to create account for " + user.username);
     return user.save().then((_user) => {
-        console.info(result);
+        console.info(_user);
         req.logIn(_user,(err) => {
             if(err){ next(err); }
             console.info(`User ${user.username} Successfully created and logged in`);
             return res.json({ user: _user, message:"Account created and authenticated" });
         })
-    }, (err) => res.status(400).send(err));
+    }, (err) => res.status(400).send(err)).catch((err) => console.error(err));
 });
 App.post('/login', (req,res,next) => {
     let signup = true;
