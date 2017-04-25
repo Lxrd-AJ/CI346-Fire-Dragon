@@ -20,7 +20,7 @@ To build for release
 - [x] Employee - Shift REST API mapping
 - ~~[ ] Keycloak Auth basic setup~~
 - [x] Passportjs auth & Angular client ouath/ Keycloak setup (Local and remote using docker)
-- [ ] Automated test of the web app 
+- [x] Automated test of the web app 
 
 # Extensions
 - [ ] HTTPS/SSL Setup keycloak
@@ -34,6 +34,6 @@ To build for release
 - [ ] Jenkins setup
 - [ ] Docker Compose setup && http://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 - [ ] Scaling using Kubernettes
-- [ ] Documentation using Jazzy https://github.com/realm/jazzy
+- [ ] Documentation using JDoc https://github.com/jsdoc3/jsdoc 
 - [ ] Sending out Emails to new users
-- [ ] End to End Testing using http://nightwatchjs.org/ 
+- [ ] More End to End Testing using http://nightwatchjs.org/ 

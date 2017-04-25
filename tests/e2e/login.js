@@ -32,7 +32,7 @@ module.exports = {
             .click("button[type='submit']")
             .expect.element("div.cdk-visually-hidden").text.to.contain(`Successfully authenticated`)
             .after(5000);
-        browser.assert.urlEquals("http://localhost:8090/#/")
+        browser.assert.urlEquals("http://localhost:8090/#/");
         browser.expect.element("li.nav-item.user").text.to.equal(username);
         browser.end();
     }
