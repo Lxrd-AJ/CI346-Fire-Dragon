@@ -1,11 +1,9 @@
 # CI346-Fire-Dragon
 CI346 Programming Assignment
 
-# Common commands
-To Build for development
-`swift build`
-To build for release
-`swift build --configuration release`
+# Running the Program
+The entire project can be packaged into a docker container. A simple `docker-compose up` in the project directory should run everything and the application should be listening on port 8090 by default.
+
 
 # HATEOAS Implementation
 The Application REST API features HATEOAS records for all resources made available in the API. A simple API call to a sample URI such as `http://localhost:8090/shift/58ff508d7a7d2a3bd50b2ef0` should return the record for a shift object alongside the HATEOAS information for all entitites in the JSON
