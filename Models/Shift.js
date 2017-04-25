@@ -1,4 +1,5 @@
 const Mongoose = require('mongoose');
+
 const ShiftSchema = Mongoose.Schema({
     name: String,
     startDate: Date,

@@ -138,11 +138,13 @@ App.post('/employee', EmployeeCtrl.createEmployee);
  * Shift REST Handlers
  */
 App.get('/shift', ShiftCtrl.getShifts);
+App.get("/shift/:id", ShiftCtrl.getShift);
 App.post('/shift', ShiftCtrl.createShift);
 
-App.all("*", (req,res) => {
+App.all("*", (req,res,next) => {
     console.info("*** Unmatched URL");
     console.log(req)
+    next()
 })
 
 App.listen(8090, function(){

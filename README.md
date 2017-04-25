@@ -7,6 +7,10 @@ To Build for development
 To build for release
 `swift build --configuration release`
 
+# HATEOAS Implementation
+The Application REST API features HATEOAS records for all resources made available in the API. A simple API call to a sample URI such as `http://localhost:8090/shift/58ff508d7a7d2a3bd50b2ef0` should return the record for a shift object alongside the HATEOAS information for all entitites in the JSON
+
+
 # ToDo
 - [x] Setup Project
 - [x] Implement tests
@@ -23,6 +27,8 @@ To build for release
 - [x] Automated test of the web app 
 
 # Extensions
+- [x] HATEOAS Implementation
+- [ ] Docker Compose setup && http://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 - [ ] HTTPS/SSL Setup keycloak
 - [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
 - [ ] Employee Model CR-UD and Controller
@@ -32,7 +38,6 @@ To build for release
 - [ ] Authentication using 3rd party OAuth (Facebook, Twitter, Google)
 - [ ] Telemetry (https://goaccess.io/)
 - [ ] Jenkins setup
-- [ ] Docker Compose setup && http://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 - [ ] Scaling using Kubernettes
 - [ ] Documentation using JDoc https://github.com/jsdoc3/jsdoc 
 - [ ] Sending out Emails to new users
