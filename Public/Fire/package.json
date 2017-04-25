@@ -5,11 +5,12 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
+    "npm": "npm",
     "start": "ng serve --proxy-config proxy.config.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "bundle": "ng build -prod"
+    "build": "ng build -prod"
   },
   "private": true,
   "dependencies": {
