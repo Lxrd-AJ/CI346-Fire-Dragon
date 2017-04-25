@@ -1,11 +1,9 @@
-version: '2'
+version: '3'
 
 services: 
   mongo:
     image: mongo
     command: mongod --smallfiles
-    networks: 
-      - all 
 
   web:
     build: .
@@ -13,10 +11,6 @@ services:
       - "8090:8090"
     volumes:
       - .:/root
-    depends_on: 
+    links: 
       - mongo
-    networks:
-      - all
 
-networks: 
-  all:
