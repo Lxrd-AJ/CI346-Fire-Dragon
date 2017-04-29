@@ -1,11 +1,9 @@
 version: '2'
 
 services: 
-  mongo:
+  localhost:
     image: mongo
     command: mongod --smallfiles
-    networks: 
-      - joint
     ports: 
       - "27017:27017"
 
@@ -14,9 +12,6 @@ services:
     ports: 
       - "8090:8090"
     links: 
-      - mongo
-    networks: 
-      - joint
+      - localhost
 
-  networks: 
-    joint:
+
