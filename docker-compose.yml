@@ -1,7 +1,7 @@
 version: '2'
 
 services: 
-  mongo:
+  database:
     image: mongo
     command: mongod --smallfiles
     ports: 
@@ -12,8 +12,9 @@ services:
     ports: 
       - "8090:8090"
     links: 
-      - mongo
+      - database
     environment: 
-      - PORT: 8090
+      - PORT = 8090
+      - DB_NAME = database
 
 

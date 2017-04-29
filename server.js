@@ -21,15 +21,12 @@ const publicDir = Path.join(__dirname,"Public");
  * Database Setup using Mongoose
  */
 console.info(process.env); //DEBUG Only
-var MONGO_DB;
-var DOCKER_DB = process.env.DB_PORT;
-if ( DOCKER_DB ) {
-  MONGO_DB = DOCKER_DB.replace( 'tcp', 'mongodb' ) + '/FireDragon';
+if ( process.env.DB_NAME ) {
+    MONGO_DB = `mongodb://${process.env.DB_NAME}:27017/FireDragon`;
 } else {
-  MONGO_DB = process.env.MONGODB;
+    MONGO_DB = "mongodb://localhost/FireDragon";
 }
-console.info(MONGO_DB);
-Mongoose.connect(MONGO_DB); //mongodb://localhost/FireDragon
+Mongoose.connect(MONGO_DB);
 const Database = Mongoose.connection;
 Database.on("error", console.error.bind(console,"Connection Error:"));
 Database.once("open", () => {
