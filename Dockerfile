@@ -1,6 +1,7 @@
 FROM node:7.9.0
 
-EXPOSE 80 27017 8090
+EXPOSE 8090 
+#80 27017 
 
 # RUN apt-get update
 # RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
