@@ -20,7 +20,16 @@ const publicDir = Path.join(__dirname,"Public");
 /**
  * Database Setup using Mongoose
  */
-Mongoose.connect('mongodb://localhost/FireDragon')
+console.info(process.env); //DEBUG Only
+var MONGO_DB;
+var DOCKER_DB = process.env.DB_PORT;
+if ( DOCKER_DB ) {
+  MONGO_DB = DOCKER_DB.replace( 'tcp', 'mongodb' ) + '/FireDragon';
+} else {
+  MONGO_DB = process.env.MONGODB;
+}
+console.info(MONGO_DB);
+Mongoose.connect(MONGO_DB); //mongodb://localhost/FireDragon
 const Database = Mongoose.connection;
 Database.on("error", console.error.bind(console,"Connection Error:"));
 Database.once("open", () => {
@@ -147,6 +156,6 @@ App.all("*", (req,res,next) => {
     next()
 })
 
-App.listen(8090, function(){
+App.listen( process.env.PORT || 8090 , function(){
     console.info("Server started on port 8090");
 })

@@ -1,7 +1,7 @@
 version: '2'
 
 services: 
-  localhost:
+  mongo:
     image: mongo
     command: mongod --smallfiles
     ports: 
@@ -12,6 +12,8 @@ services:
     ports: 
       - "8090:8090"
     links: 
-      - localhost
+      - mongo
+    environment: 
+      - PORT: 8090
 
 
