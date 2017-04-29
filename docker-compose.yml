@@ -5,7 +5,7 @@ services:
     image: mongo
     command: mongod --smallfiles
     ports: 
-      - ":27017"
+      - "27017:27017"
 
   web:
     build: .
