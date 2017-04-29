@@ -1,12 +1,18 @@
 # CI346-Fire-Dragon
 CI346 Programming Assignment
 
+
 # Running the Program
-The entire project can be packaged into a docker container. A simple `docker-compose up` in the project directory should run everything and the application should be listening on port 8090 by default.
+The entire project can be packaged into a docker container. A simple `docker-compose up` in the project directory should run everything and the application should be listening on port 8090 by default. 
+If running the docker-compose for the second time, remember to use `docker-compose build` first to build the images with the new changes as docker-compose does not build newer images.
 
 
 # HATEOAS Implementation
 The Application REST API features HATEOAS records for all resources made available in the API. A simple API call to a sample URI such as `http://localhost:8090/shift/58ff508d7a7d2a3bd50b2ef0` should return the record for a shift object alongside the HATEOAS information for all entitites in the JSON
+
+
+# Automated test of the web app
+[Nighwatch.js](http://nightwatchjs.org/) was used to perform all the end to end tests of the web app, testing all the key functionalities of the application. The test scripts are located in `tests/e2e/`
 
 
 # ToDo

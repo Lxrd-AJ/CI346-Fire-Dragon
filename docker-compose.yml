@@ -4,6 +4,8 @@ services:
   mongo:
     image: mongo
     command: mongod --smallfiles
+    networks: 
+      - joint
     ports: 
       - "27017:27017"
 
@@ -13,4 +15,8 @@ services:
       - "8090:8090"
     links: 
       - mongo
+    networks: 
+      - joint
 
+  networks: 
+    joint:
