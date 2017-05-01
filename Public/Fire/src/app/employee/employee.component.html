@@ -1,25 +1,32 @@
-<div *ngIf="!isLoading">
-    <h2 class="clearfix">
-        Manage Employees
-        <span class="float-right">
-            <button md-mini-fab (click)="launchDialog()"><md-icon>add_circle</md-icon></button>
-        </span>
-    </h2>
-    <md-list>
-        <h3 md-subheader>Employees To Fire</h3>
-        <md-list-item *ngFor="let employee of employees">
-            <md-icon md-list-avatar>perm_identity</md-icon>
-            <h4 md-line>{{employee.name}}</h4>
-            <p md-line>Age: {{employee.age}}</p>
-        </md-list-item>
-        <md-divider></md-divider>
-        <h3 md-subheader>Notes</h3>
-        <md-list-item *ngFor="let note of notes">
-            <md-icon md-list-avatar>note</md-icon>
-            <h4 md-line>{{note.name}}</h4>
-            <p md-line> {{note.updated | date}} </p>
-        </md-list-item>
-    </md-list>
+<div *ngIf="!isLoading" class="row">
+    <div class="col">
+        <h2 class="clearfix">
+            Manage Employees
+            <span class="float-right">
+                <button md-mini-fab (click)="launchDialog()"><md-icon>add_circle</md-icon></button>
+            </span>
+        </h2>
+        <md-list>
+            <h3 md-subheader>Employees To Fire</h3>
+            <md-list-item *ngFor="let employee of employees">
+                <md-icon md-list-avatar>perm_identity</md-icon>
+                <h4 md-line (click)="selectEmployee(employee)" class="emp-name">{{employee.name}}</h4>
+                <p md-line>Age: {{employee.age}}</p>
+            </md-list-item>
+            <md-divider></md-divider>
+            <h3 md-subheader>Notes</h3>
+            <md-list-item *ngFor="let note of notes">
+                <md-icon md-list-avatar>note</md-icon>
+                <h4 md-line>{{note.name}}</h4>
+                <p md-line> {{note.updated | date}} </p>
+            </md-list-item>
+        </md-list>
+    </div>
+
+    <div class="col">
+        <employee-detail [employee]="selectedEmployee"></employee-detail>
+    </div>
+    
 </div>
 
 <div *ngIf="isLoading" class="row justify-content-center">

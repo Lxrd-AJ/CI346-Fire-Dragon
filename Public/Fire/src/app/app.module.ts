@@ -17,6 +17,7 @@ import { ShiftComponent } from './shift/shift.component';
 import { AddShiftDialogComponent } from './add-shift-dialog/add-shift-dialog.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth-service.service';
+import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuthService } from './auth-service.service';
     AddEmployeeDialogComponent,
     ShiftComponent,
     AddShiftDialogComponent,
-    LoginComponent
+    LoginComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     MaterialModule.forRoot(),

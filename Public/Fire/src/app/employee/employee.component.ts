@@ -1,9 +1,12 @@
 import { Component, OnInit, Inject, ViewChild, TemplateRef } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
+import { ActivatedRoute, Params, Router }   from '@angular/router';
+import { Location }                 from '@angular/common';
 import { AddEmployeeDialogComponent } from '../add-employee-dialog/add-employee-dialog.component';
 import { EmployeeService } from '../employee.service';
 import { Employee } from '../models/employee';
 import { MdSnackBar } from '@angular/material';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 @Component({
   selector: 'employee',
@@ -18,11 +21,14 @@ export class EmployeeComponent implements OnInit {
         { name: 'One Punch Man', date: new Date() }
     ];
     isLoading: boolean = false;
-
+    selectedEmployee: Employee;
 
     constructor( public employeeDialog:MdDialog, 
         private employeeService:EmployeeService,
-        public snackBar: MdSnackBar ) { }
+        public snackBar: MdSnackBar,
+        private route: ActivatedRoute,
+        private location: Location,
+        private router: Router ) { }
 
     launchDialog(){
         let dialogRef = this.employeeDialog.open(AddEmployeeDialogComponent, {
@@ -71,8 +77,21 @@ export class EmployeeComponent implements OnInit {
         this.isLoading = true;
         this.employeeService.getEmployees().then((employees) => { 
             this.employees = employees
-            this.isLoading = false
+            this.isLoading = false;
+
+            this.route.params.subscribe(param => { 
+                let employee = this.employees.find((emp) => emp._id === param["id"])
+                if(employee){
+                    this.selectEmployee(employee);
+                }
+                console.info(param['id'])
+            });
         });
+    }
+
+    selectEmployee( employee ){
+        this.selectedEmployee = employee;
+        this.router.navigate(['/employees', employee._id]);
     }
 
 }

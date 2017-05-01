@@ -1,0 +1,20 @@
+<div *ngIf="employee" class="employee-card">
+    <md-card class="form-div">
+        <md-card-title>{{employee.name}}</md-card-title>
+        <md-card-content>
+            <p>ID: {{employee._id}} </p>
+            <p>Age: {{employee.age}} </p>
+            
+        </md-card-content>
+        <md-card-actions>
+            <button md-raised-button disabled=true>Edit</button>
+            <a href="{{employee.links[0].href}}" target="_blank" md-raised-button class="btn btn-link">
+              HATEOAS
+              <md-icon md-list-avatar>open_in_new</md-icon>
+            </a>
+            <button md-raised-button color="warn">Delete</button>
+        </md-card-actions>
+    </md-card>
+</div>
+
+

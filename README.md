@@ -1,10 +1,17 @@
 # CI346-Fire-Dragon
 CI346 Programming Assignment
 
+Live server running on Digital Ocean Droplet: http://46.101.73.65:8090/
+
 
 # Running the Program
 The entire project can be packaged into a docker container. A simple `docker-compose up` in the project directory should run everything and the application should be listening on port 8090 by default. 
+
 If running the docker-compose for the second time, remember to use `docker-compose build` first to build the images with the new changes as docker-compose does not build newer images.
+
+
+# Debugging the Program
+`npm start-dev` should run the server in development mode according to the package.json and also `npm start` in Public/Fire.
 
 
 # HATEOAS Implementation
@@ -32,9 +39,9 @@ The Application REST API features HATEOAS records for all resources made availab
 
 # Extensions
 - [x] HATEOAS Implementation
-- [ ] Docker Compose setup && http://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
-- [ ] HTTPS/SSL Setup keycloak
-- [ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/
+- [x] Docker Compose setup && http://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
+- ~~[ ] HTTPS/SSL Setup keycloak~~
+- ~~[ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/~~
 - [ ] Employee Model CR-UD and Controller
 - [ ] Employee Shift CR-UD and Controller
 - [ ] API Rate Limiting https://github.com/teechap/kitura-limiter

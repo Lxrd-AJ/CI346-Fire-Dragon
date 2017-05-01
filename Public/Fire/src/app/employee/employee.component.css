@@ -5,3 +5,8 @@ div {
 h2 {
     text-align: left;
 }
+
+.emp-name {
+    text-decoration: underline;
+    color: cornflowerblue;
+}
