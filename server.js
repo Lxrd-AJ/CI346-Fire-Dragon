@@ -20,7 +20,7 @@ const publicDir = Path.join(__dirname,"Public");
 /**
  * Database Setup using Mongoose
  */
-console.info(process.env); //DEBUG Only
+//console.info(process.env); //DEBUG Only
 if ( process.env.DB_NAME ) {
     MONGO_DB = `mongodb://${process.env.DB_NAME}:27017/FireDragon`;
 } else {
@@ -139,6 +139,7 @@ App.get('/employee', EmployeeCtrl.getEmployees);
 App.get('/employee/:id', EmployeeCtrl.getEmployee);
 App.get('/employee/:id/shift', EmployeeCtrl.getEmployee);
 App.post('/employee', EmployeeCtrl.createEmployee);
+App.delete('/employee/:id', EmployeeCtrl.deleteEmployee);
 
 /**
  * Shift REST Handlers

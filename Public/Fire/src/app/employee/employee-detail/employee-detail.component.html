@@ -8,11 +8,11 @@
         </md-card-content>
         <md-card-actions>
             <button md-raised-button disabled=true>Edit</button>
-            <a href="{{employee.links[0].href}}" target="_blank" md-raised-button class="btn btn-link">
+            <a href="{{employee.links[0]?.href}}" target="_blank" md-raised-button class="btn btn-link">
               HATEOAS
               <md-icon md-list-avatar>open_in_new</md-icon>
             </a>
-            <button md-raised-button color="warn">Delete</button>
+            <button md-raised-button color="warn" (click)="delete(employee)">Delete</button>
         </md-card-actions>
     </md-card>
 </div>

@@ -38,17 +38,18 @@ export class EmployeeComponent implements OnInit {
             //position: {top: '-50', bottom: '50', left: '-50', right: '50' },
             data: new Employee("","",null) 
         });
-        dialogRef.afterClosed().subscribe(emp=> {
+        dialogRef.afterClosed().subscribe(emp => {
             console.info("`afterClosed` message from dialog ---")
             //NB: emp is always undefined, most likely due to a bug in angular that doen't return the passed data
             //so we shall take the object directly from the dialog
-            const employee: Employee = dialogRef.componentInstance.model;
+            let employee: Employee = dialogRef.componentInstance.model;
             if( this.isEmployeeValid(employee) ){
                 this.employeeService.postEmployee(employee).then((response) => {
                     if( response.status == 200 ){
                         console.info("Successfully sent employee data to the server")
                         const json = response.json()
-                        employee._id = json.id;
+                        console.info(json);
+                        employee = json;
                         console.info(`Recieved from Server -> ${JSON.stringify(employee)}`)
                         this.snackBar.open(`Successfully saved ${employee.name}`,"Close",{duration: 3000});
                     }else{
@@ -58,8 +59,7 @@ export class EmployeeComponent implements OnInit {
                     this.employees.unshift(employee);
                 });
             }
-        })
-        
+        }) 
     }
 
     isEmployeeValid(employee: Employee) : boolean {
@@ -92,6 +92,12 @@ export class EmployeeComponent implements OnInit {
     selectEmployee( employee ){
         this.selectedEmployee = employee;
         this.router.navigate(['/employees', employee._id]);
+    }
+
+    removeEmployee( employee:Employee ){
+        console.info("Remove employee called");
+        this.employees = this.employees.filter((emp) => emp._id !== employee._id)
+        this.selectedEmployee = null;
     }
 
 }

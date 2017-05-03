@@ -34,6 +34,12 @@ export class EmployeeService {
                   .then(res => res)
   }
 
+  deleteEmployee( employee: Employee ){
+    return this.http.delete(`employee/${employee._id}`).toPromise()
+                      .then(res => res)
+                      .catch(this.handleError);
+  }
+
   /**
    * Sends a request to update an existing employee 
    */

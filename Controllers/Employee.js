@@ -1,5 +1,6 @@
 const Mongoose = require("mongoose");
 const Employee = Mongoose.model("Employee", require('./../Models/Employee.js'));
+const Shift = Mongoose.model("Shift", require('./../Models/Shift.js'));
 const Q = require('q')
 
 /**
@@ -51,6 +52,19 @@ exports.getEmployee = (req,res) => {
             res.json(_emp);
         });
     });
+}
+
+exports.deleteEmployee = (req,res) => {
+    const id = req.params.id;
+    if(id){
+        Employee.remove({ _id:id }).then((result) => {
+            //console.info(result);
+            Shift.remove({ employees: id })//.then((result) => console.info(result))
+                .then((result) => res.status(200).send(`${id} successfully deleted`));
+        })
+    }else{
+        res.status(500).send("No ID Parameter passed");
+    }
 }
 
 /**

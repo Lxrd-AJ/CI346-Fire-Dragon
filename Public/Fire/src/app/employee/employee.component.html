@@ -24,7 +24,8 @@
     </div>
 
     <div class="col">
-        <employee-detail [employee]="selectedEmployee"></employee-detail>
+        <employee-detail [employee]="selectedEmployee" (onDeleteEmployee)="removeEmployee($event)">
+        </employee-detail>
     </div>
     
 </div>
