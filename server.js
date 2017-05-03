@@ -10,6 +10,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const Passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const RateLimit = require('express-rate-limit');
 
 const App = Express();
 const User = Mongoose.model("User", require('./Models/User.js'));
@@ -47,6 +48,23 @@ App.use(Express.static(publicDir + "/Fire/dist/"))
 App.use(bodyParser.json());
 App.use(logger('short'));
 
+
+/**
+ * API Rate limiting setup
+ */
+App.enable('trust proxy'); //Reverse proxy on Nginx setup
+App.use( new RateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100, //each IP is limited to 100 requests per windowMs,
+    delayMs: 0,
+    keyGenerator: (req) => { return req.user ? req.user._id : req.ip; },
+    handler: (req, res) => {
+        res.format({
+            html: () => { res.status(500).end("API Rate limit reached") },
+            json: () => { res.status(500).json("API Rate limit reached") }
+        })
+    }
+}))
 
 
 /**

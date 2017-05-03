@@ -22,6 +22,9 @@ The Application REST API features HATEOAS records for all resources made availab
 [Nighwatch.js](http://nightwatchjs.org/) was used to perform all the end to end tests of the web app, testing all the key functionalities of the application. The test scripts are located in `tests/e2e/`
 
 
+# API Rate Limiting 
+The API rate limiting was implemented using [Express Rate limiting](https://github.com/nfriedly/express-rate-limit). It uses the IP address if the user isn't logged in or the user ID if logged in. It limits to about a 100 requests before refusing requests for a 15 minute recess period.
+
 # ToDo
 - [x] Setup Project
 - [x] Implement tests
@@ -42,10 +45,10 @@ The Application REST API features HATEOAS records for all resources made availab
 - [x] Docker Compose setup && http://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 - ~~[ ] HTTPS/SSL Setup keycloak~~
 - ~~[ ] Deploy to uni-projects.ibraheemaj.xyz/ci346/~~
-- [ ] Employee Model CR-UD and Controller
+- [ ] Employee Model CRD-U and Controller
 - [ ] Employee Shift CR-UD and Controller
-- [ ] API Rate Limiting https://github.com/teechap/kitura-limiter
-- [ ] Employee Detail Dialog to show more information
+- [x] API Rate Limiting 
+- [x] Employee Detail Dialog to show more information
 - [ ] Authentication using 3rd party OAuth (Facebook, Twitter, Google)
 - [ ] Telemetry (https://goaccess.io/)
 - [ ] Jenkins setup
